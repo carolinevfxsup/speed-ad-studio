@@ -28,7 +28,6 @@ export function Hero() {
         >
           <source src="/header.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
