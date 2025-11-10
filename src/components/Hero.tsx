@@ -17,7 +17,21 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-muted/20 py-20 md:py-32">
-      <div className="container mx-auto px-4">
+      {/* Background video */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-20"
+        >
+          <source src="/header.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
             <Badge variant="secondary" className="gap-2">

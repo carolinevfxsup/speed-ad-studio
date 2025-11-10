@@ -39,7 +39,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-foreground">New Studios AI</h1>
+            <h1 className="text-xl font-bold text-foreground">NU Studios</h1>
           </div>
 
           <nav className="hidden md:flex items-center gap-6">

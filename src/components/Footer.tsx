@@ -23,7 +23,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold text-foreground mb-4">New Studios AI</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">NU Studios</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
@@ -91,7 +91,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} New Studios AI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NU Studios. All rights reserved.</p>
         </div>
       </div>
     </footer>
