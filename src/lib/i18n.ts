@@ -123,7 +123,7 @@ export const translations = {
     },
     founder: {
       title: 'Meet the Founder',
-      description: '18 years VFX + e-commerce ops. I turn product stories into performance-ready assets.',
+      description: 'Caroline Pires is a senior VFX compositor and supervisor with nearly two decades of experience in film, television, and advertising. Her portfolio spans multi–Oscar-winning productions such as Martin Scorsese\'s Hugo 3D and globally recognized campaigns like ASICS Gellyfish.\n\nHaving worked with world-class studios including Framestore, Cinesite, and Pixomondo, Caroline combined her creative expertise with her computer science background to launch Nerdeo—an innovative online collaboration platform connecting professionals across independent film, TV, and gaming.\n\nDriven by a lifelong passion for technology and visual storytelling, Caroline founded NU Studios as the next evolution of that vision—bringing together creativity, AI, and automation to redefine how brands create and scale content in the digital age.',
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -305,8 +305,8 @@ export const translations = {
       description: 'Pequenas marcas de e-commerce (2–20 pessoas) no Reino Unido/UE/PT/BR. Fundador ou gestor de marketing. Querem conteúdo feito para si, vitórias rápidas, preços claros.',
     },
     founder: {
-      title: 'Conheça o Fundador',
-      description: '18 anos de VFX + ops de e-commerce. Transformo histórias de produtos em recursos prontos para performance.',
+      title: 'Conheça a Fundadora',
+      description: 'Caroline Pires é compositora e supervisora sénior de VFX com quase duas décadas de experiência em cinema, televisão e publicidade. O seu portfólio abrange produções premiadas com vários Óscares, como Hugo 3D de Martin Scorsese, e campanhas reconhecidas globalmente como ASICS Gellyfish.\n\nTendo trabalhado com estúdios de classe mundial incluindo Framestore, Cinesite e Pixomondo, Caroline combinou a sua expertise criativa com o seu background em ciência da computação para lançar Nerdeo—uma plataforma inovadora de colaboração online que conecta profissionais de cinema independente, TV e gaming.\n\nImpulsionada por uma paixão de longa data por tecnologia e narrativa visual, Caroline fundou NU Studios como a próxima evolução dessa visão—unindo criatividade, IA e automação para redefinir como as marcas criam e escalam conteúdo na era digital.',
     },
     faq: {
       title: 'Perguntas Frequentes',
