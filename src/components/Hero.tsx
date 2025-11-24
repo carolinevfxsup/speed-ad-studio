@@ -1,3 +1,5 @@
+import { ChevronDown } from 'lucide-react';
+
 export function Hero() {
 
   return (
@@ -13,6 +15,11 @@ export function Hero() {
         >
           <source src="/header.mp4" type="video/mp4" />
         </video>
+      </div>
+
+      {/* Bouncy scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <ChevronDown className="w-8 h-8 text-white drop-shadow-lg" strokeWidth={2.5} />
       </div>
 
     </section>
