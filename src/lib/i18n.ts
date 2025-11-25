@@ -3,6 +3,7 @@ export type Language = 'en' | 'pt';
 export const translations = {
   en: {
     nav: {
+      services: 'Services',
       work: 'Work',
       pricing: 'Pricing',
       howItWorks: 'How it works',
@@ -12,7 +13,7 @@ export const translations = {
     },
     hero: {
       headline: 'AI-powered ad content, delivered twice as fast at half the cost.',
-      subhead: 'We create UGC-style assets, 2D/3D product visuals, and short video ads for e-commerce—then automate your socials and SEO when you\'re ready.',
+      subhead: 'AI Cinematic Content. Automated.',
       primaryCta: 'Book a Call',
       secondaryCta: 'See Packages',
       trustLine: 'Built for founder-led e-commerce brands',
@@ -26,7 +27,7 @@ export const translations = {
       title: 'What your campaign kit can look like in 7–14 days',
     },
     valueProps: {
-      title: 'Why Choose Us',
+      title: 'Stop Wasting Time. Start Creating Value.',
       faster: {
         title: 'Faster to market',
         description: 'Launch campaigns in days, not weeks.',
@@ -41,7 +42,7 @@ export const translations = {
       },
     },
     offer: {
-      title: 'What You Get',
+      title: 'Everything You Need to Launch, Scale, and Automate Creative',
       creative: {
         title: 'Creative',
         description: 'UGC photos, short videos, carousels, platform-ready crops (TikTok/IG/FB/Shorts).',
@@ -186,6 +187,7 @@ export const translations = {
   },
   pt: {
     nav: {
+      services: 'Serviços',
       work: 'Trabalhos',
       pricing: 'Preços',
       howItWorks: 'Como funciona',
@@ -195,7 +197,7 @@ export const translations = {
     },
     hero: {
       headline: 'Conteúdo publicitário com IA, duas vezes mais rápido e por metade do custo.',
-      subhead: 'Criamos conteúdos UGC, visuais 2D/3D e anúncios em vídeo para e-commerce—e depois automatizamos as suas redes sociais e SEO quando precisar.',
+      subhead: 'Conteúdo Cinematográfico com IA. Automatizado.',
       primaryCta: 'Marcar Chamada',
       secondaryCta: 'Ver Pacotes',
       trustLine: 'Feito para marcas de e-commerce lideradas por fundadores',
@@ -209,7 +211,7 @@ export const translations = {
       title: 'Como o seu kit de campanha pode ficar em 7–14 dias',
     },
     valueProps: {
-      title: 'Por Que Nos Escolher',
+      title: 'Pare de Desperdiçar Tempo. Comece a Criar Valor.',
       faster: {
         title: 'Mais rápido ao mercado',
         description: 'Lance campanhas em dias, não semanas.',
@@ -224,7 +226,7 @@ export const translations = {
       },
     },
     offer: {
-      title: 'O Que Obtém',
+      title: 'Tudo o Que Precisa para Lançar, Escalar e Automatizar Criatividade',
       creative: {
         title: 'Criativo',
         description: 'Fotos UGC, vídeos curtos, carrosséis, formatos prontos para plataforma (TikTok/IG/FB/Shorts).',

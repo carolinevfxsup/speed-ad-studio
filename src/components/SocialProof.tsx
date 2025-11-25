@@ -26,8 +26,9 @@ export function SocialProof() {
     <section id="work" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl mb-4">
-            {t.socialProof.title}
+          <h2 className="text-3xl font-display md:text-4xl mb-4">
+            <span className="font-bold">{t.socialProof.title.split(' ')[0]}</span>{' '}
+            <span className="italic">{t.socialProof.title.split(' ').slice(1).join(' ')}</span>
           </h2>
         </div>
 

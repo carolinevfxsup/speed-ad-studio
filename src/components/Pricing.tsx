@@ -48,7 +48,7 @@ export function Pricing() {
     <section id="pricing" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl mb-4">
+          <h2 className="text-3xl font-display md:text-4xl mb-4">
             {t.pricing.title}
           </h2>
           <p className="text-lg text-muted-foreground">

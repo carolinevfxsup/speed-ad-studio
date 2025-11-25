@@ -23,8 +23,9 @@ export function Founder() {
             </div>
 
             <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                {t.founder.title}
+              <h2 className="text-3xl font-display mb-6">
+                <span className="font-bold">{t.founder.title.split(' ')[0]}</span>{' '}
+                <span className="italic">{t.founder.title.split(' ').slice(1).join(' ')}</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
                 {t.founder.description}
