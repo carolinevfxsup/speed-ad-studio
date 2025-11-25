@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 import { Languages } from 'lucide-react';
+import logoBlack from '@/assets/logo-black.png';
 
 export function Header() {
   const { language, setLanguage } = useLanguage();
@@ -39,10 +40,16 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-foreground">NU Studios</h1>
+            <img src={logoBlack} alt="NU Studios" className="h-8 w-auto" />
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
+            <button
+              onClick={() => scrollToSection('services')}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t.nav.services}
+            </button>
             <button
               onClick={() => scrollToSection('work')}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"

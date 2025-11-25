@@ -25,12 +25,15 @@ export function ValueProps() {
     },
   ];
 
+  const titleWords = t.valueProps.title.split(' ');
+
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">
-            {t.valueProps.title}
+          <h2 className="text-3xl font-display md:text-4xl">
+            <span className="font-bold">{titleWords.slice(0, 3).join(' ')}</span>{' '}
+            <span className="italic">{titleWords.slice(3).join(' ')}</span>
           </h2>
         </div>
 

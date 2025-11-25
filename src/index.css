@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 15% 6%;
 
-    --primary: 250 75% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 73 83% 77%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 160 84% 39%;
     --secondary-foreground: 0 0% 100%;
@@ -26,26 +26,26 @@ All colors MUST be HSL.
     --muted: 240 5% 85%;
     --muted-foreground: 240 5% 45%;
 
-    --accent: 250 75% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 73 83% 77%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 240 10% 90%;
     --input: 240 10% 90%;
-    --ring: 250 75% 65%;
+    --ring: 73 83% 77%;
 
     --radius: 1rem;
 
     /* Brand specific tokens */
     --ink: 240 15% 6%;
     --surface: 0 0% 97%;
-    --accent-purple: 250 75% 65%;
+    --accent-lime: 73 83% 77%;
     --trust-green: 160 84% 39%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(250 75% 65%) 0%, hsl(260 70% 55%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(73 83% 77%) 0%, hsl(160 84% 39%) 100%);
     --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 100%);
     
     /* Shadows */
@@ -67,8 +67,8 @@ All colors MUST be HSL.
     --popover: 240 10% 10%;
     --popover-foreground: 0 0% 97%;
 
-    --primary: 250 75% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 73 83% 77%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 160 84% 39%;
     --secondary-foreground: 0 0% 100%;
@@ -76,15 +76,15 @@ All colors MUST be HSL.
     --muted: 240 10% 20%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 250 75% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 73 83% 77%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 240 10% 20%;
     --input: 240 10% 20%;
-    --ring: 250 75% 65%;
+    --ring: 73 83% 77%;
   }
 }
 

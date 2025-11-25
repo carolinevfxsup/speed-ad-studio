@@ -15,7 +15,7 @@ export function FAQ() {
     <section id="faq" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="text-3xl font-display md:text-4xl">
             {t.faq.title}
           </h2>
         </div>
