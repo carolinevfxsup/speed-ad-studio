@@ -8,8 +8,9 @@ export function Services() {
         {/* AI Content Creation */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
           <div className="order-2 md:order-1">
-            <h2 className="text-4xl font-bold text-foreground mb-6">
-              AI Content Creation
+            <h2 className="text-4xl font-display mb-6">
+              <span className="font-bold">AI</span>{' '}
+              <span className="italic">Content Creation</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We craft everything from authentic, UGC‑style posts to polished, agency‑quality ad creatives—static or animated—to match your brand's aesthetic across every platform. Our AI tools don't just create content; they uncover trending topics within your niche and generate SEO‑optimised blog posts enriched with relevant links and metadata to boost rankings. Choose to use your own visuals or let us produce on‑brand AI imagery—either way, we handle the entire process to deliver content that engages audiences and grows your organic reach.
@@ -38,8 +39,9 @@ export function Services() {
             </div>
           </div>
           <div className="order-2">
-            <h2 className="text-4xl font-bold text-foreground mb-6">
-              AI Automations
+            <h2 className="text-4xl font-display mb-6">
+              <span className="font-bold">AI</span>{' '}
+              <span className="italic">Automations</span>
             </h2>
             <ul className="text-lg text-muted-foreground space-y-3 mb-6">
               <li>• AI content creation that matches your brand</li>
@@ -56,8 +58,9 @@ export function Services() {
         {/* VFX Solutions */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-4xl font-bold text-foreground mb-6">
-              VFX Solutions
+            <h2 className="text-4xl font-display mb-6">
+              <span className="font-bold">VFX</span>{' '}
+              <span className="italic">Solutions</span>
             </h2>
             <ul className="text-lg text-muted-foreground space-y-3 mb-6">
               <li>• Full VFX productions</li>
