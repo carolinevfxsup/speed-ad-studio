@@ -60,11 +60,11 @@ export function Pricing() {
           {packages.map((pkg, i) => (
             <Card
               key={i}
-              className={`p-8 flex flex-col relative ${
+              className={`p-8 flex flex-col relative transition-all duration-300 group ${
                 pkg.highlighted
                   ? 'bg-primary/5 border-primary border-2 shadow-[var(--shadow-elevated)]'
                   : 'bg-card border-2'
-              }`}
+              } hover:border-black hover:border-4 hover:bg-primary hover:[&_button]:bg-white`}
             >
               {pkg.badge && (
                 <Badge className="absolute top-4 right-4 bg-secondary">

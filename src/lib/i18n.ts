@@ -27,9 +27,10 @@ export const translations = {
       title: 'What your campaign kit can look like in 7–14 days',
     },
     valueProps: {
-      title: 'Stop Wasting Time. Start Creating Value.',
+      title: 'Why Choose Us?',
+      subtitle: 'Stop Wasting Time. Start Creating Value.',
       faster: {
-        title: 'Faster to market',
+        title: 'We save you time',
         description: 'Launch campaigns in days, not weeks.',
       },
       polish: {
@@ -37,12 +38,13 @@ export const translations = {
         description: '18 years of VFX eye for detail.',
       },
       budget: {
-        title: 'Built for SMB budgets',
-        description: 'Packages from $500.',
+        title: 'We save you money',
+        description: 'Smaller teams creating even more content.',
       },
     },
     offer: {
       title: 'Everything You Need to Launch, Scale, and Automate Creative',
+      subtitle: 'Check out our deliverables.',
       cinematicAd: {
         title: 'Cinematic AI Ad',
         description: 'Scroll-stopping UGC, short-form, and static ads tailored to your brand.',
@@ -61,7 +63,7 @@ export const translations = {
       },
     },
     pricing: {
-      title: 'Packages',
+      title: 'Pricing Packages',
       subtitle: 'Choose the right fit for your brand',
       cta: 'Get This Package',
       starter: {
@@ -134,7 +136,7 @@ export const translations = {
       description: 'Caroline Pires is a senior VFX compositor and supervisor with nearly two decades of experience in film, television, and advertising. Her portfolio spans multi–Oscar-winning productions such as Martin Scorsese\'s Hugo 3D and globally recognized campaigns like ASICS Gellyfish.\n\nHaving worked with world-class studios including Framestore, Cinesite, and Pixomondo, Caroline combined her creative expertise with her computer science background to launch Nerdeo—an innovative online collaboration platform connecting professionals across independent film, TV, and gaming.\n\nDriven by a lifelong passion for technology and visual storytelling, Caroline founded NU Studios as the next evolution of that vision—bringing together creativity, AI, and automation to redefine how brands create and scale content in the digital age.',
     },
     faq: {
-      title: 'Frequently Asked Questions',
+      title: 'What do we need from you?',
       questions: [
         {
           q: 'How fast is delivery?',
@@ -218,9 +220,10 @@ export const translations = {
       title: 'Como o seu kit de campanha pode ficar em 7–14 dias',
     },
     valueProps: {
-      title: 'Pare de Desperdiçar Tempo. Comece a Criar Valor.',
+      title: 'Porquê Escolher-nos?',
+      subtitle: 'Pare de Desperdiçar Tempo. Comece a Criar Valor.',
       faster: {
-        title: 'Mais rápido ao mercado',
+        title: 'Poupamos o seu tempo',
         description: 'Lance campanhas em dias, não semanas.',
       },
       polish: {
@@ -228,12 +231,13 @@ export const translations = {
         description: '18 anos de experiência em VFX com atenção aos detalhes.',
       },
       budget: {
-        title: 'Orçamentos PME',
-        description: 'Pacotes desde $500.',
+        title: 'Poupamos o seu dinheiro',
+        description: 'Equipas mais pequenas criando ainda mais conteúdo.',
       },
     },
     offer: {
       title: 'Tudo o Que Precisa para Lançar, Escalar e Automatizar Criatividade',
+      subtitle: 'Confira os nossos entregáveis.',
       cinematicAd: {
         title: 'Anúncio Cinematográfico com IA',
         description: 'UGC impactante, formato curto e anúncios estáticos personalizados para a sua marca.',
@@ -252,7 +256,7 @@ export const translations = {
       },
     },
     pricing: {
-      title: 'Pacotes',
+      title: 'Pacotes de Preços',
       subtitle: 'Escolha o mais adequado para a sua marca',
       cta: 'Obter Este Pacote',
       starter: {
@@ -325,7 +329,7 @@ export const translations = {
       description: 'Caroline Pires é compositora e supervisora sénior de VFX com quase duas décadas de experiência em cinema, televisão e publicidade. O seu portfólio abrange produções premiadas com vários Óscares, como Hugo 3D de Martin Scorsese, e campanhas reconhecidas globalmente como ASICS Gellyfish.\n\nTendo trabalhado com estúdios de classe mundial incluindo Framestore, Cinesite e Pixomondo, Caroline combinou a sua expertise criativa com o seu background em ciência da computação para lançar Nerdeo—uma plataforma inovadora de colaboração online que conecta profissionais de cinema independente, TV e gaming.\n\nImpulsionada por uma paixão de longa data por tecnologia e narrativa visual, Caroline fundou NU Studios como a próxima evolução dessa visão—unindo criatividade, IA e automação para redefinir como as marcas criam e escalam conteúdo na era digital.',
     },
     faq: {
-      title: 'Perguntas Frequentes',
+      title: 'O que precisamos de si?',
       questions: [
         {
           q: 'Quão rápida é a entrega?',

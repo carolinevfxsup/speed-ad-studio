@@ -27,13 +27,17 @@ export function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:hello@newstudios.ai" className="hover:text-foreground transition-colors">
-                  hello@newstudios.ai
+                <a href="mailto:hello@nustudios.co.uk" className="hover:text-foreground transition-colors">
+                  hello@nustudios.co.uk
                 </a>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>{t.footer.location}</span>
+                <span>Lisbon, PT</span>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="h-4 w-4" />
+                <span>London, UK</span>
               </div>
             </div>
           </div>

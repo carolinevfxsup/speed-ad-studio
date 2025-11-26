@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 import { Card } from '@/components/ui/card';
-import { Rocket, Sparkles, DollarSign } from 'lucide-react';
+import { Clock, Sparkles, DollarSign } from 'lucide-react';
 
 export function ValueProps() {
   const { language } = useLanguage();
@@ -9,7 +9,7 @@ export function ValueProps() {
 
   const props = [
     {
-      icon: Rocket,
+      icon: Clock,
       title: t.valueProps.faster.title,
       description: t.valueProps.faster.description,
     },
@@ -30,21 +30,24 @@ export function ValueProps() {
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-display md:text-4xl">
-            <span className="font-bold">{titleWords.slice(0, 3).join(' ')}</span>{' '}
-            <span className="italic">{titleWords.slice(3).join(' ')}</span>
+        <div className="text-center mb-4">
+          <h2 className="text-3xl font-display md:text-4xl mb-3">
+            <span className="font-bold">{titleWords.slice(0, 2).join(' ')}</span>{' '}
+            <span className="italic">{titleWords.slice(2).join(' ')}</span>
           </h2>
+          <p className="text-lg font-display italic text-muted-foreground">
+            {t.valueProps.subtitle}
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {props.map((prop, i) => (
             <Card
               key={i}
-              className="p-8 bg-card hover:shadow-[var(--shadow-card)] transition-all duration-300 border-2"
+              className="p-8 bg-card hover:shadow-[var(--shadow-card)] transition-all duration-300 border-2 flex flex-col items-center text-center"
             >
-              <div className="mb-4 inline-flex p-3 rounded-2xl bg-primary/10">
-                <prop.icon className="h-6 w-6 text-primary" />
+              <div className="mb-6 inline-flex p-6 rounded-2xl bg-primary border-2 border-black">
+                <prop.icon className="h-12 w-12 text-black" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {prop.title}

@@ -23,7 +23,7 @@ export function SocialProof() {
   const demos = Array(8).fill(null);
 
   return (
-    <section id="work" className="py-20 bg-background">
+    <section id="work" className="py-20 bg-gradient-to-b from-muted/20 via-muted/30 to-muted/20 border-y-2 border-border">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl mb-4">

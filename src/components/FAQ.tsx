@@ -16,7 +16,8 @@ export function FAQ() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl">
-            {t.faq.title}
+            <span className="font-bold">{t.faq.title.split(' ')[0]}</span>{' '}
+            <span className="italic">{t.faq.title.split(' ').slice(1).join(' ')}</span>
           </h2>
         </div>
 
