@@ -43,15 +43,22 @@ export const translations = {
     },
     offer: {
       title: 'Everything You Need to Launch, Scale, and Automate Creative',
-      creative: {
-        title: 'Creative',
-        description: 'UGC photos, short videos, carousels, platform-ready crops (TikTok/IG/FB/Shorts).',
+      cinematicAd: {
+        title: 'Cinematic AI Ad',
+        description: 'Scroll-stopping UGC, short-form, and static ads tailored to your brand.',
       },
       automation: {
-        title: 'Automation (Upsell)',
-        description: 'Social scheduling, blog/SEO pipeline, monthly reporting.',
+        title: 'Done-for-You Automation',
+        description: 'We automate your creative pipeline — from blogs to posts to visuals.',
       },
-      summary: 'We start with creative that sells. Once you\'ve got results, we layer in automations to keep your content engine running—without adding headcount.',
+      direction: {
+        title: 'Creative Direction',
+        description: 'Every asset is guided by 18 years of VFX and storytelling experience.',
+      },
+      customSystems: {
+        title: 'Custom Systems, Yours to Control',
+        description: 'Want in-house control? We build and hand over your own AI workflows.',
+      },
     },
     pricing: {
       title: 'Packages',
@@ -227,15 +234,22 @@ export const translations = {
     },
     offer: {
       title: 'Tudo o Que Precisa para Lançar, Escalar e Automatizar Criatividade',
-      creative: {
-        title: 'Criativo',
-        description: 'Fotos UGC, vídeos curtos, carrosséis, formatos prontos para plataforma (TikTok/IG/FB/Shorts).',
+      cinematicAd: {
+        title: 'Anúncio Cinematográfico com IA',
+        description: 'UGC impactante, formato curto e anúncios estáticos personalizados para a sua marca.',
       },
       automation: {
-        title: 'Automação (Upsell)',
-        description: 'Agendamento de redes sociais, pipeline de blog/SEO, relatórios mensais.',
+        title: 'Automação Feita para Si',
+        description: 'Automatizamos o seu pipeline criativo — de blogs a posts a visuais.',
       },
-      summary: 'Começamos com criativo que vende. Quando tiver resultados, adicionamos automações para manter o seu motor de conteúdo a funcionar—sem aumentar a equipa.',
+      direction: {
+        title: 'Direção Criativa',
+        description: 'Cada recurso é guiado por 18 anos de experiência em VFX e storytelling.',
+      },
+      customSystems: {
+        title: 'Sistemas Personalizados, Seu Controle',
+        description: 'Quer controle interno? Construímos e entregamos os seus próprios workflows de IA.',
+      },
     },
     pricing: {
       title: 'Pacotes',
