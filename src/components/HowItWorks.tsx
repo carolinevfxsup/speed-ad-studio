@@ -50,12 +50,12 @@ export function HowItWorks() {
               key={i}
               className="p-8 bg-card border-2 hover:shadow-[var(--shadow-card)] transition-all duration-300 relative"
             >
-              <div className="text-7xl font-bold text-primary/10 absolute top-4 right-4">
-                {step.number}
+              <div className="text-8xl font-bold bg-primary border-2 border-black absolute top-4 right-4 w-20 h-20 flex items-center justify-center rounded-lg">
+                <span className="text-black">{step.number}</span>
               </div>
 
-              <div className="mb-4 inline-flex p-3 rounded-2xl bg-primary/10 relative z-10">
-                <step.icon className="h-6 w-6 text-primary" />
+              <div className="mb-4 inline-flex p-4 rounded-2xl bg-primary border-2 border-black relative z-10">
+                <step.icon className="h-9 w-9 text-black" strokeWidth={2} />
               </div>
 
               <h3 className="text-xl font-semibold text-foreground mb-3">

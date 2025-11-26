@@ -27,9 +27,9 @@ export function Hero() {
         <img 
           src={logoLime} 
           alt="NU Studios" 
-          className="w-64 md:w-96 h-auto mb-4"
+          className="w-[32rem] md:w-[48rem] h-auto mb-8"
         />
-        <p className="text-lg md:text-2xl font-display font-medium text-primary drop-shadow-lg">
+        <p className="text-2xl md:text-4xl font-display font-medium text-primary drop-shadow-lg">
           {t.hero.subhead}
         </p>
       </div>
