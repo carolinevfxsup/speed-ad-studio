@@ -20,7 +20,27 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+jobs:
+  # Add a build job before the deployment job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the code
+      - uses: actions/checkout@v4
 
+      # Step 2: Set up Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a stable Node version
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install # or yarn install if you use yarn
+
+      # Step 4: Run the build command
+      - name: Build project
+        run: npm run build # This command creates the 'dist' folder
 jobs:
   # Single deploy job since we're just deploying
   deploy:
