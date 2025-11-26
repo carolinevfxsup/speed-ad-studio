@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 import { Card } from '@/components/ui/card';
-import { Video, Bot, Sparkles, Settings } from 'lucide-react';
+import { Video, Bot, Palette, Settings } from 'lucide-react';
 
 export function Offer() {
   const { language } = useLanguage();
@@ -10,31 +10,23 @@ export function Offer() {
   const features = [
     {
       icon: Video,
-      title: language === 'en' ? 'Cinematic AI Ads' : 'Anúncios Cinematográficos com IA',
-      description: language === 'en' 
-        ? 'Scroll-stopping UGC, short-form, and static ads tailored to your brand.'
-        : 'UGC impactante, formato curto e anúncios estáticos personalizados para sua marca.',
+      title: t.offer.cinematicAd.title,
+      description: t.offer.cinematicAd.description,
     },
     {
       icon: Bot,
-      title: language === 'en' ? 'Done-for-You Automation' : 'Automação Feita para Si',
-      description: language === 'en'
-        ? 'We automate your creative pipeline — from blogs to posts to visuals.'
-        : 'Automatizamos o seu pipeline criativo — desde blogs a posts e visuais.',
+      title: t.offer.automation.title,
+      description: t.offer.automation.description,
     },
     {
-      icon: Sparkles,
-      title: language === 'en' ? 'Creative Direction' : 'Direção Criativa',
-      description: language === 'en'
-        ? 'Every asset is guided by 18 years of VFX and storytelling experience.'
-        : 'Cada ativo é guiado por 18 anos de experiência em VFX e narrativa.',
+      icon: Palette,
+      title: t.offer.direction.title,
+      description: t.offer.direction.description,
     },
     {
       icon: Settings,
-      title: language === 'en' ? 'Custom Systems, Yours to Control' : 'Sistemas Personalizados, Sob o Seu Controlo',
-      description: language === 'en'
-        ? 'Want in-house control? We build and hand over your own AI workflows.'
-        : 'Quer controlo interno? Construímos e entregamos seus próprios fluxos de IA.',
+      title: t.offer.customSystems.title,
+      description: t.offer.customSystems.description,
     },
   ];
 

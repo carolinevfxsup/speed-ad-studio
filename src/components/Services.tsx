@@ -1,5 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import aiContentFrame from '@/assets/ai-content-frame.png';
+import automationImage from '@/assets/automation-01.png';
+import vfxFrame from '@/assets/vfx-frame-01.png';
 
 export function Services() {
   return (
@@ -19,7 +22,7 @@ export function Services() {
           <div className="order-1 md:order-2">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
               <img 
-                src="/placeholder.svg" 
+                src={aiContentFrame} 
                 alt="AI Content Creation" 
                 className="w-full h-full object-cover"
               />
@@ -32,7 +35,7 @@ export function Services() {
           <div className="order-1">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
               <img 
-                src="/placeholder.svg" 
+                src={automationImage} 
                 alt="AI Automations" 
                 className="w-full h-full object-cover"
               />
@@ -74,12 +77,11 @@ export function Services() {
           </div>
           <div className="order-1 md:order-2">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              <video
-                controls
+              <img 
+                src={vfxFrame} 
+                alt="VFX Solutions" 
                 className="w-full h-full object-cover"
-              >
-                <source src="/placeholder.svg" type="video/mp4" />
-              </video>
+              />
             </div>
           </div>
         </div>
