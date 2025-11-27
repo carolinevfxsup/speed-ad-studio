@@ -23,9 +23,7 @@ import {
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 import { toast } from 'sonner';
-
-// Import the new WhatsApp icon (Assuming it's placed in assets folder)
-import whatsappIcon from '@/assets/image_c1057c.png';
+import { MessageCircle } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -55,19 +53,15 @@ export function ContactForm() {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-
-    const recipientEmail = 'caroline.pires2d@gmail.com';
+    
+    // Create mailto link with form data
     const subject = encodeURIComponent(`Discovery Call Request - ${data.package}`);
     const body = encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nWebsite: ${data.website}\nPackage: ${data.package}\n\nMessage:\n${data.message}`
     );
-
-    // CRITICAL FIX: Use window.open with '_self' target for mailto.
-    // This often resolves issues where window.location.href is blocked or ignored in secure/iframe environments.
-    const mailtoUrl = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
-    window.open(mailtoUrl, '_self');
-
-    // The success toast and form reset occur immediately.
+    
+    window.location.href = `mailto:caroline.pires2d@gmail.com?subject=${subject}&body=${body}`;
+    
     toast.success(t.form.success);
     form.reset();
     setIsSubmitting(false);
@@ -81,14 +75,12 @@ export function ContactForm() {
   ];
 
   const handleWhatsApp = () => {
-    // FIX: Using window.open with explicit URL and target for reliability.
-    const whatsappUrl = 'https://api.whatsapp.com/send?phone=+351939517942';
-    window.open(whatsappUrl, '_blank');
+    window.open('https://wa.me/351939517942', '_blank');
   };
 
   return (
     <section id="contact" className="py-20 bg-background">
-      <div className="content-wrapper">
+      <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display md:text-4xl mb-4">
@@ -109,13 +101,7 @@ export function ContactForm() {
                       <FormItem>
                         <FormLabel className="text-base font-medium">{t.form.name}</FormLabel>
                         <FormControl>
-                          {/* FIX: Added id and autocomplete for autofill/accessibility */}
-                          <Input
-                            id="name"
-                            autoComplete="name"
-                            {...field}
-                            className="border-2 border-border focus:border-primary h-12"
-                          />
+                          <Input {...field} className="border-2 border-border focus:border-primary h-12" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -129,14 +115,7 @@ export function ContactForm() {
                       <FormItem>
                         <FormLabel className="text-base font-medium">{t.form.email}</FormLabel>
                         <FormControl>
-                          {/* FIX: Added id and autocomplete for autofill/accessibility */}
-                          <Input
-                            type="email"
-                            id="email"
-                            autoComplete="email"
-                            {...field}
-                            className="border-2 border-border focus:border-primary h-12"
-                          />
+                          <Input type="email" {...field} className="border-2 border-border focus:border-primary h-12" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -150,14 +129,7 @@ export function ContactForm() {
                       <FormItem>
                         <FormLabel className="text-base font-medium">{t.form.website}</FormLabel>
                         <FormControl>
-                          {/* FIX: Added id and autocomplete for autofill/accessibility */}
-                          <Input
-                            type="url"
-                            id="website"
-                            autoComplete="url"
-                            {...field}
-                            className="border-2 border-border focus:border-primary h-12"
-                          />
+                          <Input type="url" {...field} className="border-2 border-border focus:border-primary h-12" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -172,7 +144,6 @@ export function ContactForm() {
                         <FormLabel className="text-base font-medium">{t.form.package}</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            {/* Select elements typically use 'name' which is implicitly passed via {...field} */}
                             <SelectTrigger className="border-2 border-border focus:border-primary h-12">
                               <SelectValue placeholder={t.form.selectPackage} />
                             </SelectTrigger>
@@ -197,13 +168,7 @@ export function ContactForm() {
                       <FormItem>
                         <FormLabel className="text-base font-medium">{t.form.message}</FormLabel>
                         <FormControl>
-                          {/* FIX: Added id for accessibility */}
-                          <Textarea
-                            rows={5}
-                            id="message"
-                            {...field}
-                            className="border-2 border-border focus:border-primary"
-                          />
+                          <Textarea rows={5} {...field} className="border-2 border-border focus:border-primary" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -219,15 +184,14 @@ export function ContactForm() {
 
             {/* WhatsApp Column */}
             <div className="flex flex-col justify-center items-center p-12 bg-muted/30 rounded-lg border-2 border-border">
-              <img src={whatsappIcon} alt="WhatsApp" className="h-24 w-24 mb-6" />
-
+              <MessageCircle className="h-24 w-24 text-primary mb-6" strokeWidth={1.5} />
               <h3 className="text-2xl font-display font-bold mb-4 text-center">
                 Prefer WhatsApp?
               </h3>
               <p className="text-muted-foreground text-center mb-8 leading-relaxed">
                 Get instant responses and personalized support through WhatsApp. Connect with us directly for a faster conversation.
               </p>
-              <Button
+              <Button 
                 onClick={handleWhatsApp}
                 size="lg"
                 className="w-full max-w-xs h-12 text-base"

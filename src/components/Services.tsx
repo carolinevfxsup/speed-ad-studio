@@ -6,31 +6,7 @@ import aiContentFrame from '@/assets/ai-content-frame.png';
 import automationImage from '@/assets/automation-01.png';
 import vfxFrame from '@/assets/vfx-frame-01.png';
 
-// --- START: Custom Button Component for Automations ---
-// Custom Button Styling based on the request:
-// Black Outline (border-2 border-black), Lime Green Fill (bg-[#e1f89d]), Black Text (text-black)
-const CustomAutomationButton = ({ children, onClick, className }: { children: React.ReactNode, onClick: () => void, className?: string }) => (
-  <Button
-    onClick={onClick}
-    className={`
-      text-black font-semibold uppercase tracking-wider
-      border-2 border-black rounded-lg
-      bg-[#e1f89d]
-      hover:bg-black hover:text-[#e1f89d]
-      transition-all duration-200
-      shadow-md hover:shadow-lg
-      h-12 px-8
-      ${className}
-    `}
-  >
-    {children}
-    <ArrowRight className="ml-2 h-4 w-4" />
-  </Button>
-);
-// --- END: Custom Button Component for Automations ---
-
-// UPDATED: Services now accepts an optional onNavigate prop
-export function Services({ onNavigate }: { onNavigate?: (route: string) => void }) {
+export function Services() {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
   const openVideo = (url: string) => {
@@ -39,21 +15,6 @@ export function Services({ onNavigate }: { onNavigate?: (route: string) => void 
 
   const closeVideo = () => {
     setVideoUrl(null);
-  };
-  
-  // UPDATED: New handler uses onNavigate if available, otherwise falls back to window.location (current behavior)
-  const handleAutomationNavigation = () => {
-    const route = '/automations';
-    
-    if (onNavigate) {
-        // *** FIX: Use the router's navigate function to prevent server requests (404s) on static hosting. ***
-        onNavigate(route);
-    } else {
-        // Fallback: If onNavigate is not provided, we revert to the old behavior,
-        // which will still cause a 404 in deployment if the server is not configured.
-        console.warn("onNavigate prop is missing. Falling back to window.location.href, which may cause 404 errors on deployed static sites.");
-        window.location.href = route;
-    }
   };
 
   return (
@@ -95,7 +56,7 @@ export function Services({ onNavigate }: { onNavigate?: (route: string) => void 
           </div>
         </div>
 
-        {/* AI Automations - UPDATED SECTION */}
+        {/* AI Automations */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-1">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
@@ -119,12 +80,13 @@ export function Services({ onNavigate }: { onNavigate?: (route: string) => void 
               <li>• Content distribution and scheduling</li>
               <li>• AI blogging and SEO automations</li>
             </ul>
-            
-            {/* CustomAutomationButton now calls the new handler */}
-            <CustomAutomationButton onClick={handleAutomationNavigation}>
-              View Full List
-            </CustomAutomationButton>
-
+            <Button 
+              onClick={() => window.location.href = '/automations'}
+              variant="link" 
+              className="p-0 h-auto text-primary"
+            >
+              View Full List <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
 
