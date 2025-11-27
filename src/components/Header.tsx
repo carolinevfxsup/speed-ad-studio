@@ -173,7 +173,7 @@ export function Header() {
                             setLanguage('en');
                             setMobileMenuOpen(false);
                           }}
-                          className={`px-4 py-2 rounded-md font-medium transition-colors flex-1 ${
+                          className={`px-4 py-2 rounded-md font-medium transition-colors flex-1 border-2 border-black ${
                             language === 'en' ? 'bg-primary text-black' : 'bg-muted/50 hover:bg-muted'
                           }`}
                         >
@@ -184,7 +184,7 @@ export function Header() {
                             setLanguage('pt');
                             setMobileMenuOpen(false);
                           }}
-                          className={`px-4 py-2 rounded-md font-medium transition-colors flex-1 ${
+                          className={`px-4 py-2 rounded-md font-medium transition-colors flex-1 border-2 border-black ${
                             language === 'pt' ? 'bg-primary text-black' : 'bg-muted/50 hover:bg-muted'
                           }`}
                         >
