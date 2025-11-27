@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import aiContentFrame from '@/assets/ai-content-frame.png';
-import automationImage from '@/assets/automation-02.png';
+import automationImage from '@/assets/automation-03.png';
 import vfxFrame from '@/assets/vfx-frame-01.png';
 
 export function Services() {
