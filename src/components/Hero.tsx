@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import logoLime from '@/assets/logo-lime.png';
+import logoGradient from '@/assets/logo-gradient.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 
@@ -25,7 +25,7 @@ export function Hero() {
       {/* Logo overlay centered */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-8">
         <img 
-          src={logoLime} 
+          src={logoGradient} 
           alt="NU Studios" 
           className="w-[32rem] md:w-[48rem] h-auto"
         />
