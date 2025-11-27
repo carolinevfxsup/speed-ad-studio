@@ -19,9 +19,9 @@ export function Services() {
 
   return (
     <section id="services-detail" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-7xl">
         {/* AI Content Creation */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1">
             <h2 className="text-4xl font-display mb-6">
               <span className="font-bold">AI</span>{' '}
@@ -57,7 +57,7 @@ export function Services() {
         </div>
 
         {/* AI Automations */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-1">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
               <img 
@@ -80,7 +80,11 @@ export function Services() {
               <li>• Content distribution and scheduling</li>
               <li>• AI blogging and SEO automations</li>
             </ul>
-            <Button variant="link" className="p-0 h-auto text-primary">
+            <Button 
+              onClick={() => window.location.href = '/automations'}
+              variant="link" 
+              className="p-0 h-auto text-primary"
+            >
               View Full List <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

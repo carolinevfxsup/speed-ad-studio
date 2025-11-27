@@ -12,8 +12,8 @@ export function ICP() {
       <div className="container mx-auto px-4">
         <Card className="max-w-3xl mx-auto p-12 bg-card border-2 shadow-[var(--shadow-card)]">
           <div className="text-center">
-            <div className="mb-6 inline-flex p-4 rounded-2xl bg-primary/10">
-              <Users className="h-8 w-8 text-primary" />
+            <div className="mb-6 inline-flex p-4 rounded-2xl bg-primary border-2 border-black">
+              <Users className="h-8 w-8 text-black" strokeWidth={2} />
             </div>
 
             <h2 className="text-3xl font-display md:text-4xl mb-6">

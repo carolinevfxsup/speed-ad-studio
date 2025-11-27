@@ -36,7 +36,7 @@ export function Header() {
     <>
       {/* Desktop/Tablet Header */}
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        className={`sticky z-40 w-full transition-all duration-300 md:top-0 top-[42px] ${
           isScrolled
             ? 'bg-card/95 backdrop-blur-sm shadow-[var(--shadow-soft)]'
             : 'bg-background'
@@ -79,14 +79,6 @@ export function Header() {
               >
                 {t.nav.faq}
               </button>
-              <a
-                href="https://vimeo.com/1139981506"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
-              >
-                Showreel <ExternalLink className="h-3 w-3" />
-              </a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -112,7 +104,7 @@ export function Header() {
                     <Menu className="h-5 w-5" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="w-[80vw] sm:w-[350px]">
+                <SheetContent side="right" className="w-[80vw] sm:w-[350px]">
                   <div className="flex flex-col gap-6 mt-8">
                     <button
                       onClick={() => scrollToSection('services-detail')}
@@ -144,14 +136,6 @@ export function Header() {
                     >
                       {t.nav.faq}
                     </button>
-                    <a
-                      href="https://vimeo.com/1139981506"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors flex items-center gap-2"
-                    >
-                      Showreel <ExternalLink className="h-4 w-4" />
-                    </a>
                     <div className="pt-6 border-t border-border">
                       <Button
                         variant="outline"
@@ -171,14 +155,14 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile/Tablet CTA Banner */}
-      <div className="md:hidden sticky top-16 z-40 bg-primary border-t-2 border-b-2 border-black">
+      {/* Mobile/Tablet CTA Banner - positioned above header */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-primary border-b-2 border-black">
         <button
           onClick={() => scrollToSection('contact')}
-          className="w-full py-3 px-4 text-center"
+          className="w-full py-2 px-4 text-center"
         >
-          <p className="text-sm font-bold text-black">BOOK YOUR DISCOVERY CALL</p>
-          <p className="text-xs text-black/70">20-30 minutes</p>
+          <p className="text-xs font-bold text-black">BOOK YOUR DISCOVERY CALL</p>
+          <p className="text-[10px] text-black/70">20-30 minutes</p>
         </button>
       </div>
     </>

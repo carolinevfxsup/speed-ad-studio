@@ -25,7 +25,10 @@ const Index = () => {
         <Offer />
         <Pricing />
         <HowItWorks />
-        <ICP />
+        {/* Hide ICP on desktop, show on mobile/tablet with updated icon styles */}
+        <div className="md:hidden">
+          <ICP />
+        </div>
         <Founder />
         <FAQ />
         <CTABanner />
