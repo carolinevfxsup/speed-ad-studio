@@ -12,7 +12,7 @@ export function FAQ() {
   const t = useTranslation(language);
 
   return (
-    <section id="faq" className="py-20 bg-muted/30">
+    <section id="faq" className="py-20 bg-background">
       <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl">
