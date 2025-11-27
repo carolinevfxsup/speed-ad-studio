@@ -11,7 +11,6 @@ export function Header() {
   const t = useTranslation(language);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [pendingScrollId, setPendingScrollId] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,16 +20,6 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (!mobileMenuOpen && pendingScrollId) {
-      const id = pendingScrollId;
-      setPendingScrollId(null);
-      setTimeout(() => {
-        scrollToSection(id);
-      }, 50);
-    }
-  }, [mobileMenuOpen, pendingScrollId]);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -38,15 +27,17 @@ export function Header() {
     }
   };
 
-  const handleMobileNavClick = (id: string, hash?: string) => {
+  const handleMobileNavClick = (id: string) => {
+    const hash = `#${id}`;
+
     if (window.location.pathname !== '/') {
       setMobileMenuOpen(false);
-      window.location.href = `/#${hash ?? id}`;
+      window.location.href = `/${hash}`;
       return;
     }
 
-    setPendingScrollId(id);
     setMobileMenuOpen(false);
+    window.location.hash = hash;
   };
 
   const toggleLanguage = () => {
