@@ -165,7 +165,7 @@ export function Automations() {
         </section>
 
         {/* Core Value Proposition */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-to-br from-muted/30 via-muted/50 to-muted/30 border-y-2 border-border">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-display mb-6">
