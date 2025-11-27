@@ -32,8 +32,8 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="how-it-works" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl mb-4">
             <span className="font-bold">{t.howItWorks.title.split(' ')[0]}</span>{' '}
@@ -50,27 +50,23 @@ export function HowItWorks() {
             return (
               <Card
                 key={i}
-                className="p-8 bg-card border-2 hover:border-primary transition-all duration-300 shadow-[var(--shadow-card)] relative"
+                className="p-8 bg-card border-2 hover:border-primary transition-all duration-300 shadow-[var(--shadow-card)] flex flex-col items-center text-center"
               >
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="p-4 rounded-xl bg-primary border-2 border-black">
-                      <Icon className="h-8 w-8 text-black" strokeWidth={2} />
-                    </div>
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <div className="p-4 rounded-xl bg-primary border-2 border-black">
+                    <Icon className="h-12 w-12 text-black" strokeWidth={2} />
                   </div>
-                  <div className="flex-1 pr-20">
-                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                  <div className="absolute top-8 right-8 flex-shrink-0">
-                    <img 
-                      src={step.number} 
-                      alt={`Step ${i + 1}`} 
-                      className="w-16 h-auto object-contain"
-                    />
-                  </div>
+                  <img 
+                    src={step.number} 
+                    alt={`Step ${i + 1}`} 
+                    className="w-20 h-auto object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
               </Card>
             );

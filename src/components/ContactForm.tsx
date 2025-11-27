@@ -25,6 +25,17 @@ import { useTranslation } from '@/lib/i18n';
 import { toast } from 'sonner';
 import { MessageCircle } from 'lucide-react';
 
+/**
+ * IMPORTANT: To enable email functionality:
+ * 
+ * 1. Go to https://formspree.io and create a free account
+ * 2. Create a new form and get your endpoint URL (looks like: https://formspree.io/f/your-unique-id)
+ * 3. Replace 'YOUR_FORMSPREE_ENDPOINT' in the onSubmit function below with your actual endpoint
+ * 4. Formspree will automatically forward all form submissions to caroline.pires2d@gmail.com
+ * 
+ * Note: The current setup will show an error until you add your Formspree endpoint.
+ */
+
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
@@ -54,17 +65,37 @@ export function ContactForm() {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Discovery Call Request - ${data.package}`);
-    const body = encodeURIComponent(
-      `Name: ${data.name}\nEmail: ${data.email}\nWebsite: ${data.website}\nPackage: ${data.package}\n\nMessage:\n${data.message}`
-    );
-    
-    window.location.href = `mailto:caroline.pires2d@gmail.com?subject=${subject}&body=${body}`;
-    
-    toast.success(t.form.success);
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      // Note: Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual Formspree endpoint
+      // Example: https://formspree.io/f/your-unique-id
+      const response = await fetch('YOUR_FORMSPREE_ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          website: data.website,
+          package: data.package,
+          message: data.message,
+          _subject: `Discovery Call Request - ${data.package}`,
+          _replyto: data.email,
+        }),
+      });
+
+      if (response.ok) {
+        toast.success(t.form.success);
+        form.reset();
+      } else {
+        toast.error('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const packages = [
@@ -80,7 +111,7 @@ export function ContactForm() {
 
   return (
     <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display md:text-4xl mb-4">
@@ -184,7 +215,24 @@ export function ContactForm() {
 
             {/* WhatsApp Column */}
             <div className="flex flex-col justify-center items-center p-12 bg-muted/30 rounded-lg border-2 border-border">
-              <MessageCircle className="h-24 w-24 text-primary mb-6" strokeWidth={1.5} />
+              <div className="mb-6">
+                <MessageCircle 
+                  className="h-72 w-72" 
+                  strokeWidth={1.5}
+                  style={{
+                    stroke: 'url(#whatsapp-gradient)',
+                  }}
+                />
+                <svg width="0" height="0">
+                  <defs>
+                    <linearGradient id="whatsapp-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff9a56" />
+                      <stop offset="50%" stopColor="#ff6b9d" />
+                      <stop offset="100%" stopColor="#c96dd8" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
               <h3 className="text-2xl font-display font-bold mb-4 text-center">
                 Prefer WhatsApp?
               </h3>

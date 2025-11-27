@@ -20,7 +20,7 @@ export function Footer() {
 
   return (
     <footer className="bg-card border-t-2 border-border py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold text-foreground mb-4">NU Studios</h3>

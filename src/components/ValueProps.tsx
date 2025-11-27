@@ -29,7 +29,7 @@ export function ValueProps() {
 
   return (
     <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
         <div className="text-center mb-4">
           <h2 className="text-3xl font-display md:text-4xl mb-3">
             <span className="font-bold">{titleWords.slice(0, 2).join(' ')}</span>{' '}
