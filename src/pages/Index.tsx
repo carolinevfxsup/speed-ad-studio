@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'; // <-- NEW: Import useNavigate
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Services } from '@/components/Services';
@@ -14,12 +15,16 @@ import { ContactForm } from '@/components/ContactForm';
 import { Footer } from '@/components/Footer';
 
 const Index = () => {
+  // 1. Get the navigation function from react-router-dom
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
         <Hero />
-        <Services />
+        {/* 2. Pass the navigate function to the Services component */}
+        <Services onNavigate={navigate} /> 
         <SocialProof />
         <ValueProps />
         <Offer />
