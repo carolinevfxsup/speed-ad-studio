@@ -195,10 +195,10 @@ export function ContactForm() {
             </div>
 
             {/* WhatsApp Column */}
-            <div className="flex flex-col justify-center items-center p-12 bg-muted/30 rounded-lg border-2 border-border">
-              <div className="mb-6">
+            <div className="flex flex-col justify-center items-center p-6 md:p-12 bg-muted/30 rounded-lg border-2 border-border">
+              <div className="mb-4 md:mb-6">
                 <MessageCircle 
-                  className="h-72 w-72" 
+                  className="h-32 w-32 md:h-48 md:w-48 lg:h-72 lg:w-72" 
                   strokeWidth={1.5}
                   style={{
                     stroke: 'url(#whatsapp-gradient)',
@@ -214,10 +214,10 @@ export function ContactForm() {
                   </defs>
                 </svg>
               </div>
-              <h3 className="text-2xl font-display font-bold mb-4 text-center">
+              <h3 className="text-xl md:text-2xl font-display font-bold mb-3 md:mb-4 text-center">
                 Prefer WhatsApp?
               </h3>
-              <p className="text-muted-foreground text-center mb-8 leading-relaxed">
+              <p className="text-sm md:text-base text-muted-foreground text-center mb-6 md:mb-8 leading-relaxed">
                 Get instant responses and personalized support through WhatsApp. Connect with us directly for a faster conversation.
               </p>
               <Button 
