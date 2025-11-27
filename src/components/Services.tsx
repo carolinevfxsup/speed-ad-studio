@@ -29,7 +29,8 @@ const CustomAutomationButton = ({ children, onClick, className }: { children: Re
 );
 // --- END: Custom Button Component for Automations ---
 
-export function Services() {
+// UPDATED: Services now accepts an optional onNavigate prop
+export function Services({ onNavigate }: { onNavigate?: (route: string) => void }) {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
   const openVideo = (url: string) => {
@@ -40,11 +41,19 @@ export function Services() {
     setVideoUrl(null);
   };
   
-  // New handler for the custom button
+  // UPDATED: New handler uses onNavigate if available, otherwise falls back to window.location (current behavior)
   const handleAutomationNavigation = () => {
-    // We keep the original navigation method to match the code you provided, 
-    // which is why the 404 is a deployment issue (not a code issue).
-    window.location.href = '/automations';
+    const route = '/automations';
+    
+    if (onNavigate) {
+        // *** FIX: Use the router's navigate function to prevent server requests (404s) on static hosting. ***
+        onNavigate(route);
+    } else {
+        // Fallback: If onNavigate is not provided, we revert to the old behavior,
+        // which will still cause a 404 in deployment if the server is not configured.
+        console.warn("onNavigate prop is missing. Falling back to window.location.href, which may cause 404 errors on deployed static sites.");
+        window.location.href = route;
+    }
   };
 
   return (
@@ -111,7 +120,7 @@ export function Services() {
               <li>• AI blogging and SEO automations</li>
             </ul>
             
-            {/* Replaced 'variant="link"' button with the CustomAutomationButton */}
+            {/* CustomAutomationButton now calls the new handler */}
             <CustomAutomationButton onClick={handleAutomationNavigation}>
               View Full List
             </CustomAutomationButton>
