@@ -102,7 +102,15 @@ export function Header() {
                 {t.nav.pricing}
               </button>
               <button
-                onClick={() => scrollToSection('how-it-works')}
+                onClick={() => {
+                  if (window.location.pathname === '/automations') {
+                    scrollToSection('how-it-works');
+                  } else if (window.location.pathname !== '/') {
+                    window.location.href = '/#how-it-works';
+                  } else {
+                    scrollToSection('how-it-works');
+                  }
+                }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.howItWorks}
@@ -166,7 +174,14 @@ export function Header() {
                       {t.nav.pricing}
                     </button>
                     <button
-                      onClick={() => handleMobileNavClick('how-it-works')}
+                      onClick={() => {
+                        if (window.location.pathname === '/automations') {
+                          setMobileMenuOpen(false);
+                          setTimeout(() => scrollToSection('how-it-works'), 100);
+                        } else {
+                          handleMobileNavClick('how-it-works');
+                        }
+                      }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.howItWorks}
