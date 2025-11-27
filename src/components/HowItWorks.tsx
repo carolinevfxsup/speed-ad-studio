@@ -37,7 +37,7 @@ export function HowItWorks() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl mb-4">
             <span className="font-bold">{t.howItWorks.title.split(' ')[0]}</span>{' '}
-            <span className="italic">{t.howItWorks.title.split(' ').slice(1).join(' ')}</span>
+            <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{t.howItWorks.title.split(' ').slice(1).join(' ')}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             {t.howItWorks.subtitle}

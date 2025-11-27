@@ -38,7 +38,7 @@ export function Offer() {
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-display mb-3">
             <span className="font-bold">{titleWords[0]}</span>{' '}
-            <span className="italic">{titleWords.slice(1).join(' ')}</span>
+            <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{titleWords.slice(1).join(' ')}</span>
           </h2>
           <p className="text-lg font-display italic text-muted-foreground">
             {t.offer.subtitle}
