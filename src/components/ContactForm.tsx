@@ -24,16 +24,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 import { toast } from 'sonner';
 import { MessageCircle } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 /**
- * IMPORTANT: To enable email functionality:
- * 
- * 1. Go to https://formspree.io and create a free account
- * 2. Create a new form and get your endpoint URL (looks like: https://formspree.io/f/your-unique-id)
- * 3. Replace 'YOUR_FORMSPREE_ENDPOINT' in the onSubmit function below with your actual endpoint
- * 4. Formspree will automatically forward all form submissions to caroline.pires2d@gmail.com
- * 
- * Note: The current setup will show an error until you add your Formspree endpoint.
+ * Contact form powered by Lovable Cloud + Resend
+ * Submissions are automatically sent to caroline.pires2d@gmail.com
  */
 
 const formSchema = z.object({
@@ -66,30 +61,16 @@ export function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // Note: Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual Formspree endpoint
-      // Example: https://formspree.io/f/your-unique-id
-      const response = await fetch('YOUR_FORMSPREE_ENDPOINT', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          website: data.website,
-          package: data.package,
-          message: data.message,
-          _subject: `Discovery Call Request - ${data.package}`,
-          _replyto: data.email,
-        }),
+      const { data: responseData, error } = await supabase.functions.invoke('send-contact-email', {
+        body: data,
       });
 
-      if (response.ok) {
-        toast.success(t.form.success);
-        form.reset();
-      } else {
-        toast.error('Failed to send message. Please try again.');
+      if (error) {
+        throw error;
       }
+
+      toast.success(t.form.success);
+      form.reset();
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Failed to send message. Please try again.');
