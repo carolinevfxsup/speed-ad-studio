@@ -6,6 +6,29 @@ import aiContentFrame from '@/assets/ai-content-frame.png';
 import automationImage from '@/assets/automation-01.png';
 import vfxFrame from '@/assets/vfx-frame-01.png';
 
+// --- START: Custom Button Component for Automations ---
+// Custom Button Styling based on the request:
+// Black Outline (border-2 border-black), Lime Green Fill (bg-[#e1f89d]), Black Text (text-black)
+const CustomAutomationButton = ({ children, onClick, className }: { children: React.ReactNode, onClick: () => void, className?: string }) => (
+  <Button
+    onClick={onClick}
+    className={`
+      text-black font-semibold uppercase tracking-wider
+      border-2 border-black rounded-lg
+      bg-[#e1f89d]
+      hover:bg-black hover:text-[#e1f89d]
+      transition-all duration-200
+      shadow-md hover:shadow-lg
+      h-12 px-8
+      ${className}
+    `}
+  >
+    {children}
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </Button>
+);
+// --- END: Custom Button Component for Automations ---
+
 export function Services() {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
@@ -15,6 +38,13 @@ export function Services() {
 
   const closeVideo = () => {
     setVideoUrl(null);
+  };
+  
+  // New handler for the custom button
+  const handleAutomationNavigation = () => {
+    // We keep the original navigation method to match the code you provided, 
+    // which is why the 404 is a deployment issue (not a code issue).
+    window.location.href = '/automations';
   };
 
   return (
@@ -56,7 +86,7 @@ export function Services() {
           </div>
         </div>
 
-        {/* AI Automations */}
+        {/* AI Automations - UPDATED SECTION */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-1">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
@@ -80,13 +110,12 @@ export function Services() {
               <li>• Content distribution and scheduling</li>
               <li>• AI blogging and SEO automations</li>
             </ul>
-            <Button 
-              onClick={() => window.location.href = '/automations'}
-              variant="link" 
-              className="p-0 h-auto text-primary"
-            >
-              View Full List <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            
+            {/* Replaced 'variant="link"' button with the CustomAutomationButton */}
+            <CustomAutomationButton onClick={handleAutomationNavigation}>
+              View Full List
+            </CustomAutomationButton>
+
           </div>
         </div>
 
