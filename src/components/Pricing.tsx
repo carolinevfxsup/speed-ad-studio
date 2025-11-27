@@ -97,7 +97,7 @@ export function Pricing() {
                 onClick={scrollToContact}
                 className={`w-full transition-all duration-300 ${
                   pkg.highlighted
-                    ? 'bg-white text-black border-2 border-black hover:bg-primary hover:text-white'
+                    ? 'bg-white text-black border-2 border-black hover:bg-[hsl(var(--dark-green))] hover:text-white hover:border-black'
                     : 'bg-primary text-black border-2 border-black hover:bg-white hover:text-black group-hover:bg-white group-hover:text-black'
                 }`}
               >

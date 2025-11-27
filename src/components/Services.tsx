@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import aiContentFrame from '@/assets/ai-content-frame.png';
-import automationImage from '@/assets/automation-01.png';
+import automationImage from '@/assets/automation-02.png';
 import vfxFrame from '@/assets/vfx-frame-01.png';
 
 export function Services() {
@@ -82,10 +82,9 @@ export function Services() {
             </ul>
             <Button 
               onClick={() => window.location.href = '/automations'}
-              variant="link" 
-              className="p-0 h-auto text-primary"
+              className="bg-primary text-black border-2 border-black hover:bg-white hover:text-black gap-2"
             >
-              View Full List <ArrowRight className="ml-2 h-4 w-4" />
+              View Full List <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>

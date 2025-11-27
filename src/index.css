@@ -22,6 +22,9 @@ All colors MUST be HSL.
 
     --secondary: 160 84% 39%;
     --secondary-foreground: 0 0% 100%;
+    
+    --dark-green: 160 84% 25%;
+    --dark-green-foreground: 0 0% 100%;
 
     --muted: 240 5% 85%;
     --muted-foreground: 240 5% 45%;
@@ -47,6 +50,7 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(73 83% 77%) 0%, hsl(160 84% 39%) 100%);
     --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 100%);
+    --gradient-showreel: linear-gradient(135deg, #ff9a56 0%, #ff6b9d 50%, #c96dd8 100%);
     
     /* Shadows */
     --shadow-soft: 0 2px 8px -2px hsl(240 15% 6% / 0.08);
