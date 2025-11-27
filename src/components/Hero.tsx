@@ -23,20 +23,19 @@ export function Hero() {
       </div>
 
       {/* Logo overlay centered */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-8">
         <img 
           src={logoLime} 
           alt="NU Studios" 
-          className="w-[32rem] md:w-[48rem] h-auto mb-8"
+          className="w-[32rem] md:w-[48rem] h-auto"
         />
-        <p className="text-2xl md:text-4xl font-display font-medium text-primary drop-shadow-lg">
+        <p className="text-2xl md:text-4xl font-display font-medium text-primary drop-shadow-lg text-center px-4">
           {t.hero.subhead}
         </p>
-      </div>
-
-      {/* Bouncy scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-primary drop-shadow-lg" strokeWidth={2.5} />
+        {/* Bouncy scroll indicator */}
+        <div className="animate-bounce">
+          <ChevronDown className="w-8 h-8 text-primary drop-shadow-lg" strokeWidth={2.5} />
+        </div>
       </div>
 
     </section>

@@ -1,7 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 import { Card } from '@/components/ui/card';
-import { Search, Hammer, Rocket } from 'lucide-react';
+import { Phone, Clapperboard, Rocket } from 'lucide-react';
+import number1 from '@/assets/number-1.png';
+import number2 from '@/assets/number-2.png';
+import number3 from '@/assets/number-3.png';
 
 export function HowItWorks() {
   const { language } = useLanguage();
@@ -9,22 +12,22 @@ export function HowItWorks() {
 
   const steps = [
     {
-      icon: Search,
+      number: number1,
       title: t.howItWorks.step1.title,
       description: t.howItWorks.step1.description,
-      number: '01',
+      Icon: Phone,
     },
     {
-      icon: Hammer,
+      number: number2,
       title: t.howItWorks.step2.title,
       description: t.howItWorks.step2.description,
-      number: '02',
+      Icon: Clapperboard,
     },
     {
-      icon: Rocket,
+      number: number3,
       title: t.howItWorks.step3.title,
       description: t.howItWorks.step3.description,
-      number: '03',
+      Icon: Rocket,
     },
   ];
 
@@ -41,29 +44,31 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
-          {/* Connection lines for desktop */}
-          <div className="hidden md:block absolute top-20 left-[16.666%] right-[16.666%] h-0.5 bg-gradient-to-r from-primary via-secondary to-primary opacity-20" />
-
-          {steps.map((step, i) => (
-            <Card
-              key={i}
-              className="p-8 bg-card border-2 hover:shadow-[var(--shadow-card)] transition-all duration-300 relative"
-            >
-              <div className="text-8xl font-bold bg-primary border-2 border-black absolute top-4 right-4 w-20 h-20 flex items-center justify-center rounded-lg">
-                <span className="text-black">{step.number}</span>
-              </div>
-
-              <div className="mb-4 inline-flex p-4 rounded-2xl bg-primary border-2 border-black relative z-10">
-                <step.icon className="h-9 w-9 text-black" strokeWidth={2} />
-              </div>
-
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground">{step.description}</p>
-            </Card>
-          ))}
+        <div className="grid md:grid-cols-3 gap-8">
+          {steps.map((step, i) => {
+            const Icon = step.Icon;
+            return (
+              <Card
+                key={i}
+                className="p-8 bg-card border-2 hover:border-primary transition-all duration-300 shadow-[var(--shadow-card)]"
+              >
+                <div className="mb-6 flex flex-col items-start gap-4">
+                  <img 
+                    src={step.number} 
+                    alt={`Step ${i + 1}`} 
+                    className="w-24 h-24 object-contain"
+                  />
+                  <div className="p-4 rounded-xl bg-primary border-2 border-black">
+                    <Icon className="h-8 w-8 text-black" strokeWidth={2} />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

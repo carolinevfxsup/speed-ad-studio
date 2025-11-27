@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
-import { Languages, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Languages, Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
   const { language, setLanguage } = useLanguage();
@@ -82,15 +82,24 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold text-foreground mb-4">Language</h4>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={toggleLanguage}
-              className="gap-2"
-            >
-              <Languages className="h-4 w-4" />
-              <span>{language.toUpperCase()}</span>
-            </Button>
+            <div className="flex gap-3">
+              <Button
+                variant={language === 'en' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setLanguage('en')}
+                className="w-16"
+              >
+                EN
+              </Button>
+              <Button
+                variant={language === 'pt' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setLanguage('pt')}
+                className="w-16"
+              >
+                PT
+              </Button>
+            </div>
           </div>
         </div>
 

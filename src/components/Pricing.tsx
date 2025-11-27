@@ -49,7 +49,8 @@ export function Pricing() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl mb-4">
-            {t.pricing.title}
+            <span className="font-bold">Pricing</span>{' '}
+            <span className="italic">Packages</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             {t.pricing.subtitle}
@@ -62,9 +63,9 @@ export function Pricing() {
               key={i}
               className={`p-8 flex flex-col relative transition-all duration-300 group ${
                 pkg.highlighted
-                  ? 'bg-primary/5 border-primary border-2 shadow-[var(--shadow-elevated)]'
+                  ? 'bg-primary border-black border-4 shadow-[var(--shadow-elevated)]'
                   : 'bg-card border-2'
-              } hover:border-black hover:border-4 hover:bg-primary hover:[&_button]:bg-white`}
+              } hover:border-black hover:border-4 hover:bg-primary`}
             >
               {pkg.badge && (
                 <Badge className="absolute top-4 right-4 bg-secondary">
@@ -94,8 +95,11 @@ export function Pricing() {
 
               <Button
                 onClick={scrollToContact}
-                variant={pkg.highlighted ? 'default' : 'outline'}
-                className="w-full"
+                className={`w-full transition-all duration-300 ${
+                  pkg.highlighted
+                    ? 'bg-white text-black border-2 border-black hover:bg-primary hover:text-white'
+                    : 'bg-primary text-black border-2 border-black hover:bg-white hover:text-black group-hover:bg-white group-hover:text-black'
+                }`}
               >
                 {t.pricing.cta}
               </Button>
