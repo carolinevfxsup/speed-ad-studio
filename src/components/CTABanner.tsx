@@ -15,7 +15,7 @@ export function CTABanner() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
-      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-8">
             <span className="font-bold">{t.ctaBanner.title.split(' ')[0]}</span>{' '}

@@ -75,7 +75,7 @@ export function Automations() {
       <main>
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-background via-background to-muted/20">
-          <div className="container mx-auto px-4 max-w-6xl">
+          <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-display mb-6">
                 <span className="font-bold">Transform</span>{' '}
@@ -96,7 +96,7 @@ export function Automations() {
 
         {/* Core Value Proposition */}
         <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4 max-w-6xl">
+          <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-display mb-6">
                 <span className="font-bold">Stop</span>{' '}
@@ -116,7 +116,7 @@ export function Automations() {
 
         {/* Automation Catalog */}
         <section id="services-detail" className="py-20 bg-background">
-          <div className="container mx-auto px-4 max-w-7xl">
+          <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-display mb-4">
                 <span className="font-bold">Automation</span>{' '}
@@ -168,7 +168,7 @@ export function Automations() {
 
         {/* Closing CTA */}
         <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
+          <div className="container mx-auto px-4 md:px-8 xl:px-[100px] text-center">
             <h2 className="text-3xl md:text-5xl font-display mb-6">
               <span className="font-bold">Let's</span>{' '}
               <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Design</span>{' '}
