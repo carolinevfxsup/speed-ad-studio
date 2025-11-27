@@ -54,7 +54,7 @@ export function HowItWorks() {
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-4 rounded-xl bg-gradient-to-br from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black">
-                    <Icon className="h-12 w-12 text-white" strokeWidth={2} />
+                    <Icon className="h-12 w-12 text-black" strokeWidth={2} />
                   </div>
                   <img 
                     src={step.number} 

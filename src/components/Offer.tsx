@@ -52,7 +52,7 @@ export function Offer() {
               className="p-6 bg-card hover:shadow-[var(--shadow-card)] transition-all duration-300 border group flex flex-col items-center text-center"
             >
               <div className="mb-6 inline-flex p-6 rounded-xl bg-gradient-to-br from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black group-hover:opacity-80 transition-all">
-                <feature.icon className="h-12 w-12 text-white" strokeWidth={2} />
+                <feature.icon className="h-12 w-12 text-black" strokeWidth={2} />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2 font-display">
                 {feature.title}
