@@ -104,26 +104,6 @@ export function Automations() {
           </div>
         </section>
 
-        {/* Core Value Proposition */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-display mb-6">
-                <span className="font-bold">Stop</span>{' '}
-                <span className="italic">Working Harder.</span>{' '}
-                <span className="font-bold">Start</span>{' '}
-                <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Working Smarter.</span>
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                The modern business landscape demands speed and precision. Manual, repetitive tasks 
-                drain your team's energy and introduce errors. We integrate custom AI workflows directly 
-                into your operations, creating a smarter, faster, and more scalable business foundation. 
-                We don't just build systems; we engineer sustainable growth.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Automation Catalog */}
         <section id="services-detail" className="py-20 bg-background">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
@@ -172,6 +152,26 @@ export function Automations() {
                   </Card>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Core Value Proposition */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-display mb-6">
+                <span className="font-bold">Stop</span>{' '}
+                <span className="italic">Working Harder.</span>{' '}
+                <span className="font-bold">Start</span>{' '}
+                <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Working Smarter.</span>
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                The modern business landscape demands speed and precision. Manual, repetitive tasks 
+                drain your team's energy and introduce errors. We integrate custom AI workflows directly 
+                into your operations, creating a smarter, faster, and more scalable business foundation. 
+                We don't just build systems; we engineer sustainable growth.
+              </p>
             </div>
           </div>
         </section>
