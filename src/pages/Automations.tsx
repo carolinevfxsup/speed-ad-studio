@@ -74,6 +74,15 @@ export function Automations() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        {/* Hero Header Image */}
+        <section className="w-full bg-background">
+          <img 
+            src={aiAutomationNetwork} 
+            alt="AI Automation Network connecting various platforms and services" 
+            className="w-full h-auto object-cover"
+          />
+        </section>
+
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-background via-background to-muted/20">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
@@ -93,15 +102,6 @@ export function Automations() {
               </Button>
             </div>
           </div>
-        </section>
-
-        {/* AI Network Visualization */}
-        <section className="w-full bg-background">
-          <img 
-            src={aiAutomationNetwork} 
-            alt="AI Automation Network connecting various platforms and services" 
-            className="w-full h-auto object-cover"
-          />
         </section>
 
         {/* Core Value Proposition */}
