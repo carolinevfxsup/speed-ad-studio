@@ -24,8 +24,21 @@ export function Header() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false);
     }
+  };
+
+  const handleMobileNavClick = (id: string, hash?: string) => {
+    if (window.location.pathname !== '/') {
+      setMobileMenuOpen(false);
+      window.location.href = `/#${hash ?? id}`;
+      return;
+    }
+
+    setMobileMenuOpen(false);
+
+    setTimeout(() => {
+      scrollToSection(id);
+    }, 300);
   };
 
   const toggleLanguage = () => {
@@ -139,66 +152,31 @@ export function Header() {
                 <SheetContent side="right" className="w-[80vw] sm:w-[350px] bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
                   <div className="flex flex-col gap-6 mt-8">
                     <button
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        if (window.location.pathname !== '/') {
-                          window.location.href = '/#services-detail';
-                        } else {
-                          scrollToSection('services-detail');
-                        }
-                      }}
+                      onClick={() => handleMobileNavClick('services-detail')}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.services}
                     </button>
                     <button
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        if (window.location.pathname !== '/') {
-                          window.location.href = '/#work';
-                        } else {
-                          scrollToSection('work');
-                        }
-                      }}
+                      onClick={() => handleMobileNavClick('work')}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.work}
                     </button>
                     <button
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        if (window.location.pathname !== '/') {
-                          window.location.href = '/#pricing';
-                        } else {
-                          scrollToSection('pricing');
-                        }
-                      }}
+                      onClick={() => handleMobileNavClick('pricing')}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.pricing}
                     </button>
                     <button
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        if (window.location.pathname !== '/') {
-                          window.location.href = '/#how-it-works';
-                        } else {
-                          scrollToSection('how-it-works');
-                        }
-                      }}
+                      onClick={() => handleMobileNavClick('how-it-works')}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.howItWorks}
                     </button>
                     <button
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        if (window.location.pathname !== '/') {
-                          window.location.href = '/#faq';
-                        } else {
-                          scrollToSection('faq');
-                        }
-                      }}
+                      onClick={() => handleMobileNavClick('faq')}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.faq}
