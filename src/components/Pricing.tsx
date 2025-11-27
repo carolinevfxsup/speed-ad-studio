@@ -68,7 +68,7 @@ export function Pricing() {
               } hover:border-black hover:border-4 hover:bg-primary`}
             >
               {pkg.badge && (
-                <Badge className="absolute top-4 right-4 bg-secondary">
+                <Badge className="absolute top-4 right-4 bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] text-white border-2 border-black">
                   {pkg.badge}
                 </Badge>
               )}
@@ -97,7 +97,7 @@ export function Pricing() {
                 onClick={scrollToContact}
                 className={`w-full transition-all duration-300 ${
                   pkg.highlighted
-                    ? 'bg-white text-black border-2 border-black hover:bg-[hsl(var(--dark-green))] hover:text-white hover:border-black'
+                    ? 'bg-white text-black border-2 border-black hover:bg-gradient-to-r hover:from-[#ff9a56] hover:via-[#ff6b9d] hover:to-[#c96dd8] hover:text-white hover:border-black'
                     : 'bg-primary text-black border-2 border-black hover:bg-white hover:text-black group-hover:bg-white group-hover:text-black'
                 }`}
               >
