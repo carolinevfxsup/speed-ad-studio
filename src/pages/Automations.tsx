@@ -3,8 +3,8 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Video, Users, ShoppingCart, Briefcase } from 'lucide-react';
-import { CTABanner } from '@/components/CTABanner';
 import { ContactForm } from '@/components/ContactForm';
+import { HowItWorks } from '@/components/HowItWorks';
 
 export function Automations() {
   const scrollToContact = () => {
@@ -166,8 +166,11 @@ export function Automations() {
           </div>
         </section>
 
+        {/* How It Works Section */}
+        <HowItWorks />
+
         {/* Closing CTA */}
-        <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
+        <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px] text-center">
             <h2 className="text-3xl md:text-5xl font-display mb-6">
               <span className="font-bold">Let's</span>{' '}
@@ -186,10 +189,7 @@ export function Automations() {
           </div>
         </section>
         
-        {/* Repeated CTA Banner Section */}
-        <CTABanner />
-        
-        {/* Repeated Get Started Contact Section */}
+        {/* Contact Form */}
         <ContactForm />
       </main>
       <Footer />
