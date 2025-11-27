@@ -45,36 +45,68 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <img src={logoBlack} alt="NU Studios" className="h-11 w-auto" />
+              <a href="/" className="cursor-pointer">
+                <img src={logoBlack} alt="NU Studios" className="h-11 w-auto" />
+              </a>
             </div>
 
             <nav className="hidden xl:flex items-center gap-6">
               <button
-                onClick={() => scrollToSection('services-detail')}
+                onClick={() => {
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#services-detail';
+                  } else {
+                    scrollToSection('services-detail');
+                  }
+                }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.services}
               </button>
               <button
-                onClick={() => scrollToSection('work')}
+                onClick={() => {
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#work';
+                  } else {
+                    scrollToSection('work');
+                  }
+                }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.work}
               </button>
               <button
-                onClick={() => scrollToSection('pricing')}
+                onClick={() => {
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#pricing';
+                  } else {
+                    scrollToSection('pricing');
+                  }
+                }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.pricing}
               </button>
               <button
-                onClick={() => scrollToSection('how-it-works')}
+                onClick={() => {
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#how-it-works';
+                  } else {
+                    scrollToSection('how-it-works');
+                  }
+                }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.howItWorks}
               </button>
               <button
-                onClick={() => scrollToSection('faq')}
+                onClick={() => {
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#faq';
+                  } else {
+                    scrollToSection('faq');
+                  }
+                }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.faq}
@@ -107,31 +139,66 @@ export function Header() {
                 <SheetContent side="right" className="w-[80vw] sm:w-[350px] bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
                   <div className="flex flex-col gap-6 mt-8">
                     <button
-                      onClick={() => scrollToSection('services-detail')}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        if (window.location.pathname !== '/') {
+                          window.location.href = '/#services-detail';
+                        } else {
+                          scrollToSection('services-detail');
+                        }
+                      }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.services}
                     </button>
                     <button
-                      onClick={() => scrollToSection('work')}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        if (window.location.pathname !== '/') {
+                          window.location.href = '/#work';
+                        } else {
+                          scrollToSection('work');
+                        }
+                      }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.work}
                     </button>
                     <button
-                      onClick={() => scrollToSection('pricing')}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        if (window.location.pathname !== '/') {
+                          window.location.href = '/#pricing';
+                        } else {
+                          scrollToSection('pricing');
+                        }
+                      }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.pricing}
                     </button>
                     <button
-                      onClick={() => scrollToSection('how-it-works')}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        if (window.location.pathname !== '/') {
+                          window.location.href = '/#how-it-works';
+                        } else {
+                          scrollToSection('how-it-works');
+                        }
+                      }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.howItWorks}
                     </button>
                     <button
-                      onClick={() => scrollToSection('faq')}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        if (window.location.pathname !== '/') {
+                          window.location.href = '/#faq';
+                        } else {
+                          scrollToSection('faq');
+                        }
+                      }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.faq}
@@ -173,7 +240,13 @@ export function Header() {
       {/* Mobile/Tablet CTA Banner - positioned above header */}
       <div className="xl:hidden fixed top-0 left-0 right-0 z-50 bg-primary border-b-2 border-black">
         <button
-          onClick={() => scrollToSection('contact')}
+          onClick={() => {
+            if (window.location.pathname !== '/') {
+              window.location.href = '/#contact';
+            } else {
+              scrollToSection('contact');
+            }
+          }}
           className="w-full py-2 px-4 text-center"
         >
           <p className="text-xs font-bold text-black">BOOK YOUR DISCOVERY CALL</p>

@@ -34,7 +34,7 @@ export function Offer() {
 
   return (
     <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-display mb-3">
             <span className="font-bold">{titleWords[0]}</span>{' '}
