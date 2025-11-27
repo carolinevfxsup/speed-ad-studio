@@ -81,12 +81,6 @@ export function Header() {
               >
                 {t.nav.work}
               </button>
-              <a
-                href="/automations"
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Automations
-              </a>
               <button
                 onClick={() => {
                   if (window.location.pathname !== '/') {
@@ -105,6 +99,12 @@ export function Header() {
               >
                 {t.nav.howItWorks}
               </button>
+              <a
+                href="/automations"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Automations
+              </a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -147,13 +147,6 @@ export function Header() {
                     >
                       {t.nav.work}
                     </button>
-                    <a
-                      href="/automations"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md block"
-                    >
-                      Automations
-                    </a>
                     <button
                       onClick={() => handleMobileNavClick('pricing')}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
@@ -166,6 +159,13 @@ export function Header() {
                     >
                       {t.nav.howItWorks}
                     </button>
+                    <a
+                      href="/automations"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md block"
+                    >
+                      Automations
+                    </a>
                     <div className="pt-6 border-t border-border">
                       <div className="flex gap-2">
                         <button
