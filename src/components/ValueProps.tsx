@@ -28,7 +28,7 @@ export function ValueProps() {
   const titleWords = t.valueProps.title.split(' ');
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 border-y-2 border-border">
       <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <div className="text-center mb-4">
           <h2 className="text-3xl font-display md:text-4xl mb-3">
