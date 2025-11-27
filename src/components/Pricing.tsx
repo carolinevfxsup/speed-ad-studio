@@ -86,28 +86,26 @@ export function Pricing() {
                 </div>
               </div>
 
-              <div className="mb-8 flex-grow">
-                <ul className="space-y-3 mb-6">
-                  {pkg.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                
-                {pkg.bestFor && (
-                  <>
-                    <div className="border-t border-border my-4" />
-                    <div className="space-y-2">
-                      <p className="text-xs font-semibold text-foreground">Best for:</p>
-                      <p className="text-sm text-muted-foreground italic">{pkg.bestFor}</p>
-                    </div>
-                  </>
-                )}
-              </div>
+              <ul className="space-y-3 mb-6 flex-grow">
+                {pkg.features.map((feature, j) => (
+                  <li key={j} className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              {pkg.bestFor && (
+                <div className="mb-6">
+                  <div className="border-t border-border mb-4" />
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold text-foreground">Best for:</p>
+                    <p className="text-sm text-muted-foreground italic">{pkg.bestFor}</p>
+                  </div>
+                </div>
+              )}
 
               <Button
                 onClick={scrollToContact}
