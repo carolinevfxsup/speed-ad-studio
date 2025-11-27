@@ -64,7 +64,15 @@ export function Header() {
 
             <nav className="hidden xl:flex items-center gap-6">
               <button
-                onClick={() => scrollToSection('services-detail')}
+                onClick={() => {
+                  if (window.location.pathname === '/automations') {
+                    scrollToSection('services-detail');
+                  } else if (window.location.pathname !== '/') {
+                    window.location.href = '/#services-detail';
+                  } else {
+                    scrollToSection('services-detail');
+                  }
+                }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.services}
@@ -134,8 +142,12 @@ export function Header() {
                   <div className="flex flex-col gap-6 mt-8">
                     <button
                       onClick={() => {
-                        setMobileMenuOpen(false);
-                        setTimeout(() => scrollToSection('services-detail'), 100);
+                        if (window.location.pathname === '/automations') {
+                          setMobileMenuOpen(false);
+                          setTimeout(() => scrollToSection('services-detail'), 100);
+                        } else {
+                          handleMobileNavClick('services-detail');
+                        }
                       }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
