@@ -49,7 +49,7 @@ export function Services() {
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-16 h-16 rounded-full bg-primary border-2 border-black flex items-center justify-center">
-                  <Play className="h-8 w-8 text-black ml-1" fill="black" />
+                  <Play className="h-8 w-8 text-black ml-1" fill="#e1f89d" />
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ export function Services() {
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-16 h-16 rounded-full bg-primary border-2 border-black flex items-center justify-center">
-                  <Play className="h-8 w-8 text-black ml-1" fill="black" />
+                  <Play className="h-8 w-8 text-black ml-1" fill="#e1f89d" />
                 </div>
               </div>
             </div>

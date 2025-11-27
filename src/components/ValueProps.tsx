@@ -33,7 +33,7 @@ export function ValueProps() {
         <div className="text-center mb-4">
           <h2 className="text-3xl font-display md:text-4xl mb-3">
             <span className="font-bold">{titleWords.slice(0, 2).join(' ')}</span>{' '}
-            <span className="italic">{titleWords.slice(2).join(' ')}</span>
+            <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{titleWords.slice(2).join(' ')}</span>
           </h2>
           <p className="text-lg font-display italic text-muted-foreground">
             {t.valueProps.subtitle}
@@ -47,7 +47,7 @@ export function ValueProps() {
               className="p-8 bg-card hover:shadow-[var(--shadow-card)] transition-all duration-300 border-2 flex flex-col items-center text-center"
             >
               <div className="mb-6 inline-flex p-6 rounded-2xl bg-primary border-2 border-black">
-                <prop.icon className="h-12 w-12 text-black" strokeWidth={2} />
+                <prop.icon className="h-12 w-12 text-[#e1f89d]" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {prop.title}
