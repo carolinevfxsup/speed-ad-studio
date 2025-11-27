@@ -87,6 +87,12 @@ export function Header() {
               >
                 {t.nav.work}
               </button>
+              <a
+                href="/automations"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Automations
+              </a>
               <button
                 onClick={() => {
                   if (window.location.pathname !== '/') {
@@ -100,28 +106,10 @@ export function Header() {
                 {t.nav.pricing}
               </button>
               <button
-                onClick={() => {
-                  if (window.location.pathname !== '/') {
-                    window.location.href = '/#how-it-works';
-                  } else {
-                    scrollToSection('how-it-works');
-                  }
-                }}
+                onClick={() => scrollToSection('how-it-works')}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.howItWorks}
-              </button>
-              <button
-                onClick={() => {
-                  if (window.location.pathname !== '/') {
-                    window.location.href = '/#faq';
-                  } else {
-                    scrollToSection('faq');
-                  }
-                }}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t.nav.faq}
               </button>
             </nav>
 
@@ -162,6 +150,13 @@ export function Header() {
                     >
                       {t.nav.work}
                     </button>
+                    <a
+                      href="/automations"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md block"
+                    >
+                      Automations
+                    </a>
                     <button
                       onClick={() => handleMobileNavClick('pricing')}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
@@ -173,12 +168,6 @@ export function Header() {
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.howItWorks}
-                    </button>
-                    <button
-                      onClick={() => handleMobileNavClick('faq')}
-                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
-                    >
-                      {t.nav.faq}
                     </button>
                     <div className="pt-6 border-t border-border">
                       <div className="flex gap-2">
