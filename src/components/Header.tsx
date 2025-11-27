@@ -152,7 +152,7 @@ export function Header() {
                       onClick={() => {
                         if (window.location.pathname === '/automations') {
                           setMobileMenuOpen(false);
-                          setTimeout(() => scrollToSection('services-detail'), 100);
+                          setTimeout(() => scrollToSection('services-detail'), 300);
                         } else {
                           handleMobileNavClick('services-detail');
                         }
@@ -177,7 +177,7 @@ export function Header() {
                       onClick={() => {
                         if (window.location.pathname === '/automations') {
                           setMobileMenuOpen(false);
-                          setTimeout(() => scrollToSection('how-it-works'), 100);
+                          setTimeout(() => scrollToSection('how-it-works'), 300);
                         } else {
                           handleMobileNavClick('how-it-works');
                         }
