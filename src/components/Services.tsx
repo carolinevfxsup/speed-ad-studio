@@ -25,14 +25,14 @@ export function Services() {
           <div className="order-2 md:order-1">
             <h2 className="text-4xl font-display mb-6">
               <span className="font-bold">AI</span>{' '}
-              <span className="italic">Content Creation</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Content Creation</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               As an AI-first studio, we use cutting-edge tools to generate or enhance creative, but we also work with real footage and product photography when a hybrid approach delivers more impact. Whether fully AI-generated, human-shot, or a blend of both, we design, direct, and deliver scroll-stopping content that feels authentic, premium, and built for scale.
             </p>
             <Button 
               onClick={() => openVideo('https://player.vimeo.com/video/1140751488')}
-              className="gap-2 bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] text-black border-2 border-black hover:opacity-90 transition-opacity"
+              className="gap-2 bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black hover:opacity-90 transition-opacity text-[#e1f89d] font-semibold"
             >
               <Play className="h-4 w-4" /> PLAY
             </Button>
@@ -70,7 +70,7 @@ export function Services() {
           <div className="order-2">
             <h2 className="text-4xl font-display mb-6">
               <span className="font-bold">AI</span>{' '}
-              <span className="italic">Automations</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Automations</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Transform how you operate. Our AI automation solutions free up valuable time and resources, eliminating tedious tasks and empowering your team to achieve more with less effort.
@@ -94,7 +94,7 @@ export function Services() {
           <div className="order-2 md:order-1">
             <h2 className="text-4xl font-display mb-6">
               <span className="font-bold">VFX</span>{' '}
-              <span className="italic">Solutions</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Solutions</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Selected VFX work delivered by NU Studios Ltd. partnerships.
@@ -107,7 +107,7 @@ export function Services() {
             </ul>
             <Button 
               onClick={() => openVideo('https://player.vimeo.com/video/1139981506')}
-              className="gap-2 bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] text-black border-2 border-black hover:opacity-90 transition-opacity"
+              className="gap-2 bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black hover:opacity-90 transition-opacity text-[#e1f89d] font-semibold"
             >
               <Play className="h-4 w-4" /> PLAY
             </Button>

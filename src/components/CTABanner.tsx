@@ -19,7 +19,7 @@ export function CTABanner() {
         <div className="w-full mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-8">
             <span className="font-bold">{t.ctaBanner.title.split(' ')[0]}</span>{' '}
-            <span className="italic">{t.ctaBanner.title.split(' ').slice(1).join(' ')}</span>
+            <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{t.ctaBanner.title.split(' ').slice(1).join(' ')}</span>
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
