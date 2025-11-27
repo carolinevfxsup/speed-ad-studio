@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 import { Languages, Menu, X, ExternalLink } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import logoBlack from '@/assets/logo-black.png';
+import logoGradient from '@/assets/logo-gradient.png';
 
 export function Header() {
   const { language, setLanguage } = useLanguage();
@@ -58,7 +58,7 @@ export function Header() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <a href="/" className="cursor-pointer">
-                <img src={logoBlack} alt="NU Studios" className="h-11 w-auto" />
+                <img src={logoGradient} alt="NU Studios" className="h-11 w-auto" />
               </a>
             </div>
 
