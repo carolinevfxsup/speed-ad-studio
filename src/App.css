@@ -1,11 +1,12 @@
+/* Fix #1: Remove fixed max-width and allow full-bleed background */
 #root {
-  /* Remove fixed max-width, allowing the site to stretch */
+  /* Remove fixed max-width (was 1280px) */
   margin: 0 auto; 
   padding: 0; /* Remove root padding to allow full-bleed sections */
   text-align: center;
 }
 
-/* Add a new class for content wrappers to apply padding and centering */
+/* Fix #1: Define the new content wrapper for uniform content width and padding */
 .content-wrapper {
   /* Use a high max-width for fluid feel on ultra-wide screens */
   max-width: 1800px; 
@@ -14,6 +15,39 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+
+/* --- TODAY'S CSS FIXES START HERE --- */
+
+/* Fix #2: AI Automations Button Branding */
+/* This class must be applied to the "View Full List" button */
+.btn-full-list {
+  background-color: #e1f89d; /* Lime Green fill */
+  color: #000000; /* Black text */
+  border: 1px solid #000000; /* Black outline */
+}
+
+/* Fix #9: SCALE Button Hover State on the button itself */
+/* This class must target the button in the SCALE pricing card */
+/* (You may need to confirm the exact button class name in your HTML/JS code) */
+.scale-package-button:hover {
+  /* Dark Green color code (assuming a common dark green for ticks/graphics: #1A6C00) */
+  background-color: #1A6C00; 
+  color: #FFFFFF; /* White text */
+  border-color: #1A6C00;
+}
+
+/* Fix #8: Mobile Menu Aesthetic Fixes */
+/* MOBILE MENU BACKGROUND FIX: Applying the subtle light green gradient */
+.mobile-menu-container {
+  background: linear-gradient(to bottom, #FAFAF5 0%, #F9FFF5 100%);
+}
+
+/* Set the rollover state for the links inside the mobile menu */
+.mobile-menu-container a:hover {
+  background-color: #eeeeee; /* Light Grey rollover */
+}
+
+/* --- ORIGINAL BOILERPLATE CODE (KEPT FOR SAFETY) --- */
 
 .logo {
   height: 6em;
