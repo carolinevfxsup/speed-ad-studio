@@ -31,7 +31,7 @@ export function Hero() {
         />
         <p className="text-2xl md:text-4xl font-display font-medium drop-shadow-lg text-center px-4">
           <span className="bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">AI </span>
-          <span className="text-[#d1ff52]">Cinematic Content.</span>
+          <span className="text-[#e1f89d]">Cinematic Content.</span>
           <span className="bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent"> Automated.</span>
         </p>
         {/* Bouncy scroll indicator */}
