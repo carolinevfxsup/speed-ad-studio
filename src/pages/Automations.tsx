@@ -96,16 +96,12 @@ export function Automations() {
         </section>
 
         {/* AI Network Visualization */}
-        <section className="py-12 bg-background">
-          <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
-            <div className="flex justify-center">
-              <img 
-                src={aiAutomationNetwork} 
-                alt="AI Automation Network connecting various platforms and services" 
-                className="w-full max-w-4xl h-auto rounded-lg"
-              />
-            </div>
-          </div>
+        <section className="w-full bg-background">
+          <img 
+            src={aiAutomationNetwork} 
+            alt="AI Automation Network connecting various platforms and services" 
+            className="w-full h-auto object-cover"
+          />
         </section>
 
         {/* Core Value Proposition */}
