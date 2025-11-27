@@ -81,9 +81,9 @@ export function ContactForm() {
 
   const packages = [
     t.pricing.starter.name,
-    t.pricing.growth.name,
     t.pricing.scale.name,
-    t.pricing.bespoke.name,
+    t.pricing.bespokeAI.name,
+    t.pricing.bespokeVFX.name,
   ];
 
   const handleWhatsApp = () => {

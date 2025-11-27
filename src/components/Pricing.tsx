@@ -21,25 +21,29 @@ export function Pricing() {
       name: t.pricing.starter.name,
       price: t.pricing.starter.price,
       features: t.pricing.starter.features,
-      highlighted: false,
-    },
-    {
-      name: t.pricing.growth.name,
-      price: t.pricing.growth.price,
-      features: t.pricing.growth.features,
+      bestFor: t.pricing.starter.bestFor,
       highlighted: false,
     },
     {
       name: t.pricing.scale.name,
       price: t.pricing.scale.price,
       features: t.pricing.scale.features,
+      bestFor: t.pricing.scale.bestFor,
       highlighted: true,
       badge: t.pricing.scale.badge,
     },
     {
-      name: t.pricing.bespoke.name,
-      price: t.pricing.bespoke.price,
-      features: t.pricing.bespoke.features,
+      name: t.pricing.bespokeAI.name,
+      price: t.pricing.bespokeAI.price,
+      features: t.pricing.bespokeAI.features,
+      bestFor: t.pricing.bespokeAI.bestFor,
+      highlighted: false,
+    },
+    {
+      name: t.pricing.bespokeVFX.name,
+      price: t.pricing.bespokeVFX.price,
+      features: t.pricing.bespokeVFX.features,
+      bestFor: t.pricing.bespokeVFX.bestFor,
       highlighted: false,
     },
   ];
@@ -82,16 +86,28 @@ export function Pricing() {
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8 flex-grow">
-                {pkg.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mb-8 flex-grow">
+                <ul className="space-y-3 mb-6">
+                  {pkg.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                
+                {pkg.bestFor && (
+                  <>
+                    <div className="border-t border-border my-4" />
+                    <div className="space-y-2">
+                      <p className="text-xs font-semibold text-foreground">Best for:</p>
+                      <p className="text-sm text-muted-foreground italic">{pkg.bestFor}</p>
+                    </div>
+                  </>
+                )}
+              </div>
 
               <Button
                 onClick={scrollToContact}
