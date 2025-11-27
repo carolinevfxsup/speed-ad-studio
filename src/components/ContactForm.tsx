@@ -26,7 +26,7 @@ import { toast } from 'sonner';
 // import { MessageCircle } from 'lucide-react'; // Removing default icon
 
 // Import the new WhatsApp icon (Assuming it's placed in assets folder)
-import whatsappIcon from '@/assets/image_c1057c.png'; 
+import whatsappIcon from '@/assets/image_c1057c.png'; 
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -58,17 +58,22 @@ export function ContactForm() {
     setIsSubmitting(true);
     
     // Fix #4 (Part 1 & 2): Email Form Functionality Fix - Confirmed to send to caroline.pires2d@gmail.com
-    const recipientEmail = 'caroline.pires2d@gmail.com'; 
+    const recipientEmail = 'caroline.pires2d@gmail.com'; 
     const subject = encodeURIComponent(`Discovery Call Request - ${data.package}`);
     const body = encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nWebsite: ${data.website}\nPackage: ${data.package}\n\nMessage:\n${data.message}`
     );
     
+    // This opens the user's default email client with the pre-filled message.
     window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
     
-    toast.success(t.form.success);
-    form.reset();
-    setIsSubmitting(false);
+    // Note on mailto: Since mailto is synchronous, we use a slight delay 
+    // to allow the browser to initiate the email client before showing the success toast.
+    setTimeout(() => {
+      toast.success(t.form.success);
+      form.reset();
+      setIsSubmitting(false);
+    }, 100);
   };
 
   const packages = [
@@ -191,7 +196,7 @@ export function ContactForm() {
             <div className="flex flex-col justify-center items-center p-12 bg-muted/30 rounded-lg border-2 border-border">
               {/* Fix #6: Updated WhatsApp icon */}
               <img src={whatsappIcon} alt="WhatsApp" className="h-24 w-24 mb-6" />
-              
+              
               <h3 className="text-2xl font-display font-bold mb-4 text-center">
                 Prefer WhatsApp?
               </h3>
