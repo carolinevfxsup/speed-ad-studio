@@ -8,7 +8,7 @@ export function Founder() {
   const t = useTranslation(language);
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <Card className="w-full mx-auto p-8 md:p-12 bg-card border-2">
           <div className="flex flex-col md:flex-row items-stretch gap-8">

@@ -91,7 +91,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <div className="w-full mx-auto">
           <div className="text-center mb-12">
