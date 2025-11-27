@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import logoGradient from '@/assets/logo-gradient.png';
+import logoHero from '@/assets/logo-hero.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
 
@@ -25,11 +25,11 @@ export function Hero() {
       {/* Logo overlay centered */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-8">
         <img 
-          src={logoGradient} 
+          src={logoHero} 
           alt="NU Studios" 
           className="w-[32rem] md:w-[48rem] h-auto"
         />
-        <p className="text-2xl md:text-4xl font-display font-medium text-primary drop-shadow-lg text-center px-4">
+        <p className="text-2xl md:text-4xl font-display font-medium bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent drop-shadow-lg text-center px-4">
           {t.hero.subhead}
         </p>
         {/* Bouncy scroll indicator */}
