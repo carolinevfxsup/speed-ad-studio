@@ -32,7 +32,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-muted/30">
+    <section id="how-it-works" className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10">
       <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl mb-4">
@@ -50,11 +50,11 @@ export function HowItWorks() {
             return (
               <Card
                 key={i}
-                className="p-8 bg-card border-2 hover:border-primary transition-all duration-300 shadow-[var(--shadow-card)] flex flex-col items-center text-center"
+                className="p-8 bg-card border-2 hover:border-primary transition-all duration-300 shadow-[var(--shadow-card)]"
               >
-                <div className="flex items-center justify-center gap-4 mb-6">
-                  <div className="p-4 rounded-xl bg-primary border-2 border-black">
-                    <Icon className="h-12 w-12 text-black" strokeWidth={2} />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black">
+                    <Icon className="h-12 w-12 text-white" strokeWidth={2} />
                   </div>
                   <img 
                     src={step.number} 
