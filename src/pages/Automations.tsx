@@ -6,6 +6,7 @@ import { Video, Users, ShoppingCart, Briefcase } from 'lucide-react';
 import { ContactForm } from '@/components/ContactForm';
 import { HowItWorks } from '@/components/HowItWorks';
 import aiAutomationNetwork from '@/assets/ai-automation-network.jpg';
+import headerMobileAutomations from '@/assets/header-mobile-automations.jpg';
 
 export function Automations() {
   const scrollToContact = () => {
@@ -76,10 +77,17 @@ export function Automations() {
       <main>
         {/* Hero Header Image */}
         <section className="w-full bg-background">
+          {/* Mobile header */}
+          <img 
+            src={headerMobileAutomations} 
+            alt="AI Automation Network connecting various platforms and services" 
+            className="w-full h-auto object-cover md:hidden"
+          />
+          {/* Desktop header */}
           <img 
             src={aiAutomationNetwork} 
             alt="AI Automation Network connecting various platforms and services" 
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover hidden md:block"
           />
         </section>
 
