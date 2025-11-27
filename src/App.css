@@ -1,8 +1,18 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* Remove fixed max-width, allowing the site to stretch */
+  margin: 0 auto; 
+  padding: 0; /* Remove root padding to allow full-bleed sections */
   text-align: center;
+}
+
+/* Add a new class for content wrappers to apply padding and centering */
+.content-wrapper {
+  /* Use a high max-width for fluid feel on ultra-wide screens */
+  max-width: 1800px; 
+  margin: 0 auto;
+  /* Apply the minimal edge padding */
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .logo {
