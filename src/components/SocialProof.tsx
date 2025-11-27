@@ -53,16 +53,7 @@ export function SocialProof() {
                     muted
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/60 transition-colors">
-                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="play-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{ stopColor: '#ff9a56', stopOpacity: 1 }} />
-                          <stop offset="50%" style={{ stopColor: '#ff6b9d', stopOpacity: 1 }} />
-                          <stop offset="100%" style={{ stopColor: '#c96dd8', stopOpacity: 1 }} />
-                        </linearGradient>
-                      </defs>
-                      <Play className="w-12 h-12" fill="url(#play-gradient)" stroke="url(#play-gradient)" />
-                    </svg>
+                    <Play className="w-12 h-12 text-white" fill="white" />
                   </div>
                 </div>
               )}
