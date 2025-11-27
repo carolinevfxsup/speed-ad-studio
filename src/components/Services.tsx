@@ -19,7 +19,7 @@ export function Services() {
 
   return (
     <section id="services-detail" className="py-20 bg-background">
-      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         {/* AI Content Creation */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 md:order-1">

@@ -111,7 +111,7 @@ export function ContactForm() {
 
   return (
     <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4 md:px-8 xl:px-[100px] max-w-7xl">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display md:text-4xl mb-4">
