@@ -32,7 +32,7 @@ export function Services() {
             </p>
             <Button 
               onClick={() => openVideo('https://player.vimeo.com/video/1140751488')}
-              className="gap-2 bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black hover:opacity-90 transition-opacity text-[#e1f89d] font-semibold"
+              className="gap-2 bg-[#e1f89d] border-2 border-black hover:opacity-90 transition-opacity text-black font-semibold"
             >
               <Play className="h-4 w-4" /> PLAY
             </Button>
@@ -107,7 +107,7 @@ export function Services() {
             </ul>
             <Button 
               onClick={() => openVideo('https://player.vimeo.com/video/1139981506')}
-              className="gap-2 bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black hover:opacity-90 transition-opacity text-[#e1f89d] font-semibold"
+              className="gap-2 bg-[#e1f89d] border-2 border-black hover:opacity-90 transition-opacity text-black font-semibold"
             >
               <Play className="h-4 w-4" /> PLAY
             </Button>
