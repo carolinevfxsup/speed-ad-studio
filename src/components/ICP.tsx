@@ -18,7 +18,7 @@ export function ICP() {
 
             <h2 className="text-3xl font-display md:text-4xl mb-6">
               <span className="font-bold">{t.icp.title.split(' ')[0]}</span>{' '}
-              <span className="italic">{t.icp.title.split(' ').slice(1).join(' ')}</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{t.icp.title.split(' ').slice(1).join(' ')}</span>
             </h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">

@@ -29,10 +29,8 @@ export function Hero() {
           alt="NU Studios" 
           className="w-[32rem] md:w-[48rem] h-auto"
         />
-        <p className="text-2xl md:text-4xl font-display font-medium drop-shadow-lg text-center px-4">
-          <span className="text-[#e1f89d]">AI </span>
-          <span className="bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Cinematic Content.</span>
-          <span className="text-[#e1f89d]"> Automated.</span>
+        <p className="text-2xl md:text-4xl font-display font-medium drop-shadow-lg text-center px-4 text-[#e1f89d]">
+          AI Cinematic Content. Automated.
         </p>
         {/* Bouncy scroll indicator */}
         <div className="animate-bounce">
