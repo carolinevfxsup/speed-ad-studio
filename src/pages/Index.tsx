@@ -1,6 +1,5 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
-import aiNetworkHeader from '@/assets/ai-network-header.jpg';
 import { Services } from '@/components/Services';
 import { SocialProof } from '@/components/SocialProof';
 import { ValueProps } from '@/components/ValueProps';
@@ -20,13 +19,6 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <section className="w-full">
-          <img 
-            src={aiNetworkHeader} 
-            alt="AI Network Connections" 
-            className="w-full h-auto object-cover"
-          />
-        </section>
         <Services />
         <SocialProof />
         <ValueProps />
