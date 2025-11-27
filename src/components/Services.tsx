@@ -48,7 +48,7 @@ export function Services() {
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-16 h-16 rounded-full bg-primary border-2 border-black flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black flex items-center justify-center">
                   <Play className="h-8 w-8 text-black ml-1" fill="black" />
                 </div>
               </div>
@@ -123,7 +123,7 @@ export function Services() {
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-16 h-16 rounded-full bg-primary border-2 border-black flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black flex items-center justify-center">
                   <Play className="h-8 w-8 text-black ml-1" fill="black" />
                 </div>
               </div>
