@@ -64,13 +64,7 @@ export function Header() {
 
             <nav className="hidden xl:flex items-center gap-6">
               <button
-                onClick={() => {
-                  if (window.location.pathname !== '/') {
-                    window.location.href = '/#services-detail';
-                  } else {
-                    scrollToSection('services-detail');
-                  }
-                }}
+                onClick={() => scrollToSection('services-detail')}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t.nav.services}
@@ -139,7 +133,10 @@ export function Header() {
                 <SheetContent side="right" className="w-[80vw] sm:w-[350px] bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
                   <div className="flex flex-col gap-6 mt-8">
                     <button
-                      onClick={() => handleMobileNavClick('services-detail')}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setTimeout(() => scrollToSection('services-detail'), 100);
+                      }}
                       className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.services}
