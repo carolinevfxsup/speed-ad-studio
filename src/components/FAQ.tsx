@@ -21,7 +21,7 @@ export function FAQ() {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {t.faq.questions.map((item, i) => (
               <AccordionItem

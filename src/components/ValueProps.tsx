@@ -40,7 +40,7 @@ export function ValueProps() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8">
           {props.map((prop, i) => (
             <Card
               key={i}

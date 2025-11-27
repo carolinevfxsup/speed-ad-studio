@@ -10,7 +10,7 @@ export function Founder() {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
-        <Card className="max-w-5xl mx-auto p-8 md:p-12 bg-card border-2">
+        <Card className="w-full mx-auto p-8 md:p-12 bg-card border-2">
           <div className="flex flex-col md:flex-row items-stretch gap-8">
             <div className="shrink-0 md:w-80">
               <div className="w-full h-full rounded-2xl overflow-hidden">
