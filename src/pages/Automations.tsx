@@ -97,7 +97,7 @@ export function Automations() {
                 Unlock unparalleled efficiency and accelerate your business growth by leveraging 
                 intelligent AI automations that handle the heavy lifting, so you can focus on what truly matters.
               </p>
-              <Button size="lg" onClick={scrollToContact}>
+              <Button size="lg" onClick={scrollToContact} className="text-xs sm:text-sm md:text-base">
                 Schedule Your Free Automation Strategy Session
               </Button>
             </div>
@@ -123,7 +123,7 @@ export function Automations() {
                 return (
                   <Card key={idx} className="p-8 md:p-12 border-2 hover:border-primary transition-all duration-300">
                     <div className="flex items-start gap-6 mb-6">
-                      <div className="p-4 rounded-2xl bg-gradient-to-br from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black shrink-0">
+                      <div className="p-4 rounded-2xl bg-[#e1f89d] border-2 border-black shrink-0">
                         <Icon className="h-10 w-10 text-black" strokeWidth={2} />
                       </div>
                       <div>
