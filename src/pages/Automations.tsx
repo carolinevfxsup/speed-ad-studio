@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Video, Users, ShoppingCart, Briefcase } from 'lucide-react';
 import { ContactForm } from '@/components/ContactForm';
 import { HowItWorks } from '@/components/HowItWorks';
+import aiAutomationNetwork from '@/assets/ai-automation-network.jpg';
 
 export function Automations() {
   const scrollToContact = () => {
@@ -90,6 +91,19 @@ export function Automations() {
               <Button size="lg" onClick={scrollToContact}>
                 Schedule Your Free Automation Strategy Session
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Network Visualization */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
+            <div className="flex justify-center">
+              <img 
+                src={aiAutomationNetwork} 
+                alt="AI Automation Network connecting various platforms and services" 
+                className="w-full max-w-4xl h-auto rounded-lg"
+              />
             </div>
           </div>
         </section>
