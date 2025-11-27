@@ -3,10 +3,15 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Video, Users, ShoppingCart, Briefcase } from 'lucide-react';
+import { CTABanner } from '@/components/CTABanner';
+import { ContactForm } from '@/components/ContactForm';
 
 export function Automations() {
   const scrollToContact = () => {
-    window.location.href = '/#contact';
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const categories = [
@@ -74,9 +79,9 @@ export function Automations() {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-display mb-6">
                 <span className="font-bold">Transform</span>{' '}
-                <span className="italic text-primary">Your Business.</span>{' '}
+                <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Your Business.</span>{' '}
                 <span className="font-bold">Automate</span>{' '}
-                <span className="italic text-primary">Your Edge.</span>
+                <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Your Edge.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
                 Unlock unparalleled efficiency and accelerate your business growth by leveraging 
@@ -97,7 +102,7 @@ export function Automations() {
                 <span className="font-bold">Stop</span>{' '}
                 <span className="italic">Working Harder.</span>{' '}
                 <span className="font-bold">Start</span>{' '}
-                <span className="italic text-primary">Working Smarter.</span>
+                <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Working Smarter.</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 The modern business landscape demands speed and precision. Manual, repetitive tasks 
@@ -110,7 +115,7 @@ export function Automations() {
         </section>
 
         {/* Automation Catalog */}
-        <section className="py-20 bg-background">
+        <section id="services-detail" className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-display mb-4">
@@ -166,9 +171,9 @@ export function Automations() {
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl md:text-5xl font-display mb-6">
               <span className="font-bold">Let's</span>{' '}
-              <span className="italic text-primary">Design</span>{' '}
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Design</span>{' '}
               <span className="font-bold">Your Custom</span>{' '}
-              <span className="italic text-primary">AI Workflow.</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">AI Workflow.</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               We don't sell templates; we build solutions tailored to your unique business needs. 
@@ -180,6 +185,12 @@ export function Automations() {
             </Button>
           </div>
         </section>
+        
+        {/* Repeated CTA Banner Section */}
+        <CTABanner />
+        
+        {/* Repeated Get Started Contact Section */}
+        <ContactForm />
       </main>
       <Footer />
     </div>

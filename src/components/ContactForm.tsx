@@ -75,7 +75,7 @@ export function ContactForm() {
   ];
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/351939517942', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=351939517942', '_blank');
   };
 
   return (

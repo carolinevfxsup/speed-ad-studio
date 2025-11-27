@@ -36,7 +36,7 @@ export function Header() {
     <>
       {/* Desktop/Tablet Header */}
       <header
-        className={`sticky z-40 w-full transition-all duration-300 md:top-0 top-[42px] ${
+        className={`sticky z-40 w-full transition-all duration-300 xl:top-0 top-[42px] ${
           isScrolled
             ? 'bg-card/95 backdrop-blur-sm shadow-[var(--shadow-soft)]'
             : 'bg-background'
@@ -48,7 +48,7 @@ export function Header() {
               <img src={logoBlack} alt="NU Studios" className="h-11 w-auto" />
             </div>
 
-            <nav className="hidden md:flex items-center gap-6">
+            <nav className="hidden xl:flex items-center gap-6">
               <button
                 onClick={() => scrollToSection('services-detail')}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -86,66 +86,81 @@ export function Header() {
                 variant="ghost"
                 size="sm"
                 onClick={toggleLanguage}
-                className="gap-2 hidden md:flex"
+                className="gap-2 hidden xl:flex"
               >
                 <Languages className="h-4 w-4" />
                 <span className="text-sm font-medium">{language.toUpperCase()}</span>
               </Button>
               
               {/* Desktop Book Call Button */}
-              <Button onClick={() => scrollToSection('contact')} className="hidden md:flex">
+              <Button onClick={() => scrollToSection('contact')} className="hidden xl:flex">
                 {t.nav.bookCall}
               </Button>
 
               {/* Mobile Menu Trigger */}
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="md:hidden">
+                  <Button variant="ghost" size="icon" className="xl:hidden">
                     <Menu className="h-5 w-5" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-[80vw] sm:w-[350px]">
+                <SheetContent side="right" className="w-[80vw] sm:w-[350px] bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10">
                   <div className="flex flex-col gap-6 mt-8">
                     <button
                       onClick={() => scrollToSection('services-detail')}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
+                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.services}
                     </button>
                     <button
                       onClick={() => scrollToSection('work')}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
+                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.work}
                     </button>
                     <button
                       onClick={() => scrollToSection('pricing')}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
+                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.pricing}
                     </button>
                     <button
                       onClick={() => scrollToSection('how-it-works')}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
+                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.howItWorks}
                     </button>
                     <button
                       onClick={() => scrollToSection('faq')}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
+                      className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md"
                     >
                       {t.nav.faq}
                     </button>
                     <div className="pt-6 border-t border-border">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={toggleLanguage}
-                        className="gap-2 w-full justify-start"
-                      >
-                        <Languages className="h-4 w-4" />
-                        <span className="text-sm font-medium">{language.toUpperCase()}</span>
-                      </Button>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => {
+                            setLanguage('en');
+                            setMobileMenuOpen(false);
+                          }}
+                          className={`px-4 py-2 rounded-md font-medium transition-colors flex-1 ${
+                            language === 'en' ? 'bg-primary text-black' : 'bg-muted/50 hover:bg-muted'
+                          }`}
+                        >
+                          EN
+                        </button>
+                        <button
+                          onClick={() => {
+                            setLanguage('pt');
+                            setMobileMenuOpen(false);
+                          }}
+                          className={`px-4 py-2 rounded-md font-medium transition-colors flex-1 ${
+                            language === 'pt' ? 'bg-primary text-black' : 'bg-muted/50 hover:bg-muted'
+                          }`}
+                        >
+                          PT
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </SheetContent>
@@ -156,7 +171,7 @@ export function Header() {
       </header>
 
       {/* Mobile/Tablet CTA Banner - positioned above header */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-primary border-b-2 border-black">
+      <div className="xl:hidden fixed top-0 left-0 right-0 z-50 bg-primary border-b-2 border-black">
         <button
           onClick={() => scrollToSection('contact')}
           className="w-full py-2 px-4 text-center"
