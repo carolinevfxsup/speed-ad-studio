@@ -124,7 +124,7 @@ export const translations = {
       subtitle: 'Three simple steps to transform your content',
       step1: {
         title: 'Discovery',
-        description: '15–30 min call to understand your goals, products, and platforms.',
+        description: '30 min call to understand your goals, products, and platforms.',
       },
       step2: {
         title: 'Production',
@@ -325,7 +325,7 @@ export const translations = {
       subtitle: 'Três passos simples para transformar o seu conteúdo',
       step1: {
         title: 'Descoberta',
-        description: 'Chamada de 15–30 min para entender seus objetivos, produtos e plataformas.',
+        description: 'Chamada de 30 min para entender seus objetivos, produtos e plataformas.',
       },
       step2: {
         title: 'Produção',
