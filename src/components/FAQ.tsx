@@ -17,7 +17,7 @@ export function FAQ() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display md:text-4xl">
             <span className="font-bold">{t.faq.title.split(' ')[0]}</span>{' '}
-            <span className="italic">{t.faq.title.split(' ').slice(1).join(' ')}</span>
+            <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{t.faq.title.split(' ').slice(1).join(' ')}</span>
           </h2>
         </div>
 
