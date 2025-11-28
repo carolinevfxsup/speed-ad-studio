@@ -23,13 +23,17 @@ export function CTABanner() {
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" onClick={scrollToContact}>
+            <Button 
+              size="lg" 
+              onClick={scrollToContact}
+              className="hover:bg-white hover:text-black border-2 border-black transition-colors"
+            >
               {t.ctaBanner.primaryCta}
             </Button>
             <Button
               size="lg"
-              variant="outline"
               asChild
+              className="bg-primary text-black border-2 border-black hover:bg-white hover:text-black transition-colors"
             >
               <a href="mailto:hello@nustudios.co.uk">
                 {t.ctaBanner.secondaryCta}
