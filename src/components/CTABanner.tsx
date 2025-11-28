@@ -31,7 +31,7 @@ export function CTABanner() {
               variant="outline"
               asChild
             >
-              <a href="mailto:caroline.pires2d@gmail.com">
+              <a href="mailto:hello@nustudios.co.uk">
                 {t.ctaBanner.secondaryCta}
               </a>
             </Button>
