@@ -28,7 +28,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 /**
  * Contact form powered by Lovable Cloud + Resend
- * Submissions are automatically sent to caroline.pires2d@gmail.com
+ * Submissions are automatically sent to hello@nustudios.co.uk
  */
 
 const formSchema = z.object({
