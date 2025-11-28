@@ -30,7 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to your business email
     const emailResponse = await resend.emails.send({
-      from: "NU Studios Contact Form <onboarding@resend.dev>",
+      from: "NU Studios Contact Form <contact@nustudios.co.uk>",
       to: ["hello@nustudios.co.uk"],
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
