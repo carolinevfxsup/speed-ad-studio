@@ -53,7 +53,7 @@ export function HowItWorks() {
                 className="p-8 bg-card border-2 hover:border-primary transition-all duration-300 shadow-[var(--shadow-card)]"
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] border-2 border-black">
+                  <div className="p-4 rounded-xl bg-primary border-2 border-black">
                     <Icon className="h-12 w-12 text-black" strokeWidth={2} />
                   </div>
                   <img 
