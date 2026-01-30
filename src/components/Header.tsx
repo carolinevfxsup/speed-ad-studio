@@ -2,9 +2,16 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/lib/i18n';
-import { Languages, Menu, X, ExternalLink } from 'lucide-react';
+import { Languages, Menu, ChevronDown } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import logoBlack from '@/assets/logo-black.png';
+
 export function Header() {
   const {
     language,
@@ -64,15 +71,33 @@ export function Header() {
             }} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 {t.nav.services}
               </button>
-              <button onClick={() => {
-              if (window.location.pathname !== '/') {
-                window.location.href = '/#work';
-              } else {
-                scrollToSection('work');
-              }
-            }} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                {t.nav.work}
-              </button>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
+                  {t.nav.work}
+                  <ChevronDown className="h-3 w-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="bg-card border border-border">
+                  <DropdownMenuItem asChild>
+                    <button 
+                      onClick={() => {
+                        if (window.location.pathname !== '/') {
+                          window.location.href = '/#work';
+                        } else {
+                          scrollToSection('work');
+                        }
+                      }} 
+                      className="w-full text-left cursor-pointer"
+                    >
+                      All Work
+                    </button>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="/work/quinta-do-pinto" className="cursor-pointer">
+                      Quinta Do Pinto
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <button onClick={() => {
               if (window.location.pathname !== '/') {
                 window.location.href = '/#pricing';
@@ -128,9 +153,18 @@ export function Header() {
                   }} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md">
                       {t.nav.services}
                     </button>
-                    <button onClick={() => handleMobileNavClick('work')} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md">
-                      {t.nav.work}
-                    </button>
+                    <div className="space-y-2">
+                      <button onClick={() => handleMobileNavClick('work')} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md w-full">
+                        {t.nav.work}
+                      </button>
+                      <a 
+                        href="/work/quinta-do-pinto" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block"
+                      >
+                        Quinta Do Pinto
+                      </a>
+                    </div>
                     <button onClick={() => handleMobileNavClick('pricing')} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md">
                       {t.nav.pricing}
                     </button>
