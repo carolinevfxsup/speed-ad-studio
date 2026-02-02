@@ -96,6 +96,16 @@ export function Header() {
                       Quinta Do Pinto
                     </a>
                   </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="/work/salt_lily_showcase" className="cursor-pointer">
+                      Salt Lily Jewellery
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="/work/O_Palmeiral_showcase" className="cursor-pointer">
+                      O Palmeiral Restaurant
+                    </a>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <button onClick={() => {
@@ -163,6 +173,20 @@ export function Header() {
                         className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block"
                       >
                         Quinta Do Pinto
+                      </a>
+                      <a 
+                        href="/work/salt_lily_showcase" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block"
+                      >
+                        Salt Lily Jewellery
+                      </a>
+                      <a 
+                        href="/work/O_Palmeiral_showcase" 
+                        onClick={() => setMobileMenuOpen(false)} 
+                        className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block"
+                      >
+                        O Palmeiral Restaurant
                       </a>
                     </div>
                     <button onClick={() => handleMobileNavClick('pricing')} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md">
