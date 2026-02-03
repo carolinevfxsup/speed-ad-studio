@@ -28,17 +28,16 @@ export default function OPalmeiralShowcase() {
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden">
-        {/* Hero Background Image with Darkening Overlay */}
-        <div className="absolute inset-0 -z-10">
+        {/* Hero Background Image - no overlay so image is fully visible */}
+        <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
             alt="O Palmeiral restaurant" 
-            className="w-full h-full object-cover brightness-[0.7]"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/30" />
         </div>
         
-        <div className="container mx-auto px-4 md:px-8 xl:px-[100px] py-20 md:py-32">
+        <div className="container relative z-10 mx-auto px-4 md:px-8 xl:px-[100px] py-20 md:py-32">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-tight text-white drop-shadow-lg">
               From unused photos to daily Instagram posts — <span className="italic">fully automated.</span>

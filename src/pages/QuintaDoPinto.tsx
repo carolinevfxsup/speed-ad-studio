@@ -27,17 +27,16 @@ const QuintaDoPinto = () => {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
-          {/* Hero Background Image with Darkening Overlay */}
-          <div className="absolute inset-0 -z-10">
+          {/* Hero Background Image - no overlay so image is fully visible */}
+          <div className="absolute inset-0 z-0">
             <img 
               src={heroImage} 
               alt="Quinta do Pinto winery estate at sunrise" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/50" />
           </div>
           
-          <div className="container mx-auto px-4 md:px-8 xl:px-[100px] py-20 md:py-32">
+          <div className="container relative z-10 mx-auto px-4 md:px-8 xl:px-[100px] py-20 md:py-32">
             <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px] mx-auto text-center">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6 text-white drop-shadow-lg">
                 Quinta do Pinto
