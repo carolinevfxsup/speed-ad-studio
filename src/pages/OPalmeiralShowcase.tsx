@@ -3,7 +3,7 @@ import { Footer } from '@/components/Footer';
 import { ProjectNavigation } from '@/components/ProjectNavigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, FolderOpen, Eye, Camera, Utensils, Wine, Users, Palette, Hash, ListChecks, Clock, Heart, Handshake, User } from 'lucide-react';
-import heroImage from '@/assets/palmeiral-header.avif';
+import heroImage from '../assets/palmeiral-header.avif';
 import contentImage from '@/assets/palmeiral-content.png';
 import danielImage from '@/assets/palmeiral-daniel.webp';
 import automationControlImage from '@/assets/palmeiral-automation-control.jpeg';
@@ -213,11 +213,12 @@ export default function OPalmeiralShowcase() {
       {/* System Overview */}
       <section id="system-flow" className="py-24 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 max-w-3xl" id="how-it-works">
-            How the <span className="italic">system works</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mb-8">
+          <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px]">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 max-w-3xl" id="how-it-works">
+              How the <span className="italic">system works</span>
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-8 w-full">
             {/* Step 1 */}
             <div className="bg-background p-8 rounded-xl border">
               <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mb-6 border border-foreground">
@@ -268,9 +269,9 @@ export default function OPalmeiralShowcase() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl">
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8 w-full">
             {/* Step 4 */}
             <div className="bg-background p-8 rounded-xl border">
               <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mb-6 border border-foreground">
@@ -306,6 +307,7 @@ export default function OPalmeiralShowcase() {
                 <li>Automatic posting at scheduled times</li>
                 <li>Consistent daily presence</li>
               </ul>
+            </div>
             </div>
           </div>
         </div>

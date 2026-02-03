@@ -3,7 +3,7 @@ import { Footer } from '@/components/Footer';
 import { ProjectNavigation } from '@/components/ProjectNavigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Bot, Clapperboard, Camera } from 'lucide-react';
-import heroImage from '@/assets/quinta-do-pinto-header.jpg';
+import heroImage from '../assets/quinta-do-pinto-header.jpg';
 import moodboardImage from '@/assets/quinta-moodboard.jpg';
 import theIdeaGif from '@/assets/quinta-the-idea.gif';
 import beforeImage from '@/assets/quinta-before.png';
@@ -56,7 +56,7 @@ const QuintaDoPinto = () => {
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px]">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-center">
                 <div>
                   <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
                     The <span className="italic">brief</span>
@@ -73,7 +73,7 @@ const QuintaDoPinto = () => {
                   <img 
                     src={moodboardImage} 
                     alt="Creative moodboard for Quinta do Pinto wine content" 
-                    className="w-full md:w-1/2 md:ml-auto rounded-lg shadow-xl"
+                    className="w-full lg:max-w-[85%] lg:ml-auto rounded-lg shadow-xl"
                   />
                 </div>
               </div>
@@ -145,12 +145,12 @@ const QuintaDoPinto = () => {
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px]">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-center">
                 <div className="order-2 md:order-1">
                   <img 
                     src={theIdeaGif} 
                     alt="Wine bottle on cement vat texture showing the creative concept" 
-                    className="w-full max-w-md md:max-w-[280px] md:mx-0 rounded-lg shadow-xl"
+                    className="w-full max-w-md md:max-w-[400px] lg:max-w-[480px] md:mx-0 rounded-lg shadow-xl"
                   />
                 </div>
                 <div className="order-1 md:order-2">
@@ -266,7 +266,7 @@ const QuintaDoPinto = () => {
         <section className="py-20 md:py-32 bg-muted/20">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px]">
-              <div className="mb-16">
+              <div className="mb-16 text-left">
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
                   Results <span className="italic">Matter</span>
                 </h2>
@@ -280,8 +280,8 @@ const QuintaDoPinto = () => {
                 </p>
               </div>
               
-              {/* Results Videos Grid */}
-              <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl">
+              {/* Results Videos Grid - full width of container */}
+              <div className="grid md:grid-cols-3 gap-6 lg:gap-8 w-full">
               <div className="aspect-[9/16] rounded-lg overflow-hidden shadow-xl">
                 <video 
                   autoPlay 
