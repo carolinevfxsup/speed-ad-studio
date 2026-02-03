@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { ProjectNavigation } from '@/components/ProjectNavigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Bot, Clapperboard, Camera } from 'lucide-react';
 import heroImage from '@/assets/quinta-do-pinto-header.jpg';
@@ -7,6 +8,8 @@ import moodboardImage from '@/assets/quinta-moodboard.jpg';
 import theIdeaGif from '@/assets/quinta-the-idea.gif';
 import beforeImage from '@/assets/quinta-before.png';
 import afterImage from '@/assets/quinta-after.png';
+import nusLogo from '@/assets/nus-logo-round.png';
+import saltLilyThumbnail from '@/assets/quinta-after.png';
 
 const QuintaDoPinto = () => {
   const scrollToContact = () => {
@@ -55,7 +58,7 @@ const QuintaDoPinto = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
-                  The brief
+                  The <span className="italic">brief</span>
                 </h2>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                   Quinta do Pinto, a distinguished Portuguese winery with deep roots in the Lisbon wine region, 
@@ -69,7 +72,7 @@ const QuintaDoPinto = () => {
                 <img 
                   src={moodboardImage} 
                   alt="Creative moodboard for Quinta do Pinto wine content" 
-                  className="w-full rounded-lg shadow-xl"
+                  className="w-full md:w-1/2 md:ml-auto rounded-lg shadow-xl"
                 />
               </div>
             </div>
@@ -79,16 +82,16 @@ const QuintaDoPinto = () => {
         {/* What We Did - Redesigned like How It Works */}
         <section className="py-20 md:py-32 bg-muted/20">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                What <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">We Did</span>
+            <div className="mb-16">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-foreground">
+                What <span className="italic">We Did</span>
               </h2>
               <p className="text-muted-foreground text-lg">
                 Three deliverables designed to maximise launch impact
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl">
               {/* Card 1 - AI-first creative direction */}
               <div className="bg-card rounded-xl p-8 border border-border shadow-sm">
                 <div className="flex items-center justify-between mb-6">
@@ -142,12 +145,12 @@ const QuintaDoPinto = () => {
                 <img 
                   src={theIdeaGif} 
                   alt="Wine bottle on cement vat texture showing the creative concept" 
-                  className="w-full max-w-md mx-auto rounded-lg shadow-xl"
+                  className="w-full max-w-md md:max-w-[280px] mx-auto rounded-lg shadow-xl"
                 />
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
-                  The idea
+                  The <span className="italic">idea</span>
                 </h2>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
                   The wine is aged in cement vats — a distinctive winemaking choice that speaks to both tradition 
@@ -169,7 +172,7 @@ const QuintaDoPinto = () => {
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
-                From bottle to launch content
+                From bottle to <span className="italic">launch content</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
                 The client provided standard product photography. We transformed it into a complete visual 
@@ -209,7 +212,7 @@ const QuintaDoPinto = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
-                  Attention to detail
+                  Attention to <span className="italic">detail</span>
                 </h2>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
                   AI-generated content often fails in the details: garbled label text, distorted typography, 
@@ -242,7 +245,7 @@ const QuintaDoPinto = () => {
                   loop 
                   muted 
                   playsInline
-                  className="w-full rounded-lg shadow-xl"
+                  className="w-full md:w-[63%] md:ml-auto rounded-lg shadow-xl"
                 >
                   <source src="/videos/quinta-attention-to-detail.mp4" type="video/mp4" />
                 </video>
@@ -256,7 +259,7 @@ const QuintaDoPinto = () => {
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
-                Results
+                Results <span className="italic">Matter</span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
                 Quinta do Pinto launched with a cohesive content suite: one cinematic video and a set of 
@@ -312,7 +315,7 @@ const QuintaDoPinto = () => {
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
-                Why this works for wine brands
+                Why this <span className="italic">works for wine brands</span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
                 Wineries operate on seasonal rhythms. Harvests, releases, and events don't wait for 
@@ -346,15 +349,24 @@ const QuintaDoPinto = () => {
         <section className="py-20 md:py-32 bg-muted/20">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
-                About NU Studios
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                NU Studios is an AI-first creative agency that creates and automates content. We combine 
-                18 years of VFX and visual storytelling experience with modern AI tools to deliver 
-                agency-quality work — faster and at a fraction of traditional costs. Our focus is on 
-                craftsmanship, restraint, and results that respect your brand.
-              </p>
+              <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start">
+                <img 
+                  src={nusLogo} 
+                  alt="NU Studios logo" 
+                  className="w-24 h-24 md:w-auto md:h-auto md:max-h-[180px] rounded-full object-contain mx-auto md:mx-0"
+                />
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
+                    About <span className="italic">NU Studios</span>
+                  </h2>
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                    NU Studios is an AI-first creative agency that creates and automates content. We combine 
+                    18 years of VFX and visual storytelling experience with modern AI tools to deliver 
+                    agency-quality work — faster and at a fraction of traditional costs. Our focus is on 
+                    craftsmanship, restraint, and results that respect your brand.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -364,7 +376,7 @@ const QuintaDoPinto = () => {
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                Ready to transform your wine content?
+                Ready to transform your <span className="italic">wine content?</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
                 Book a discovery call to discuss your next launch, or reach out to start a conversation.
@@ -391,6 +403,15 @@ const QuintaDoPinto = () => {
             </div>
           </div>
         </section>
+
+        {/* Project Navigation */}
+        <ProjectNavigation 
+          nextProject={{
+            title: 'Salt Lily Jewellery',
+            slug: '/work/salt_lily_showcase',
+            thumbnail: saltLilyThumbnail
+          }}
+        />
       </main>
       <Footer />
     </div>
