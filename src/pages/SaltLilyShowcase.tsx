@@ -7,6 +7,7 @@ import { ArrowRight, Check, Upload, FolderOpen, Hash, UserCheck, Send, Mail } fr
 import { Link } from 'react-router-dom';
 
 // Assets
+import goatBefore from '@/assets/salt-lily/GOAT.png';
 import heroAfter from '@/assets/salt-lily/Gemini_Generated_Image_gx9357gx9357gx93_1.jpeg';
 import femmeHer from '@/assets/salt-lily/FEMME_HER.png';
 import jewelryProduct from '@/assets/salt-lily/jewelry_prodoct.jpg';
@@ -14,20 +15,22 @@ import necklaceAndHoops from '@/assets/salt-lily/necklace_and_hoops.png';
 import sourceStill from '@/assets/salt-lily/baae6b23-4f9e-49d9-8b07-9c5b8efbd951.jpg';
 import femmeProductAfter from '@/assets/salt-lily/Salt_lily_FEMME_product.png';
 import femmeProductBefore from '@/assets/salt-lily/Salt_lily_FEMME_product_earring.png';
+import slider2Before from '@/assets/salt-lily/94eb8954-6637-43f2-9553-042705895ff8.jpg';
+import slider2After from '@/assets/salt-lily/ChunkyFinal.jpg';
+import slider3Before from '@/assets/salt-lily/5a56838a-7813-48c8-ae76-5898844dc13a.jpg';
+import slider3After from '@/assets/salt-lily/Gemini_Generated_Image_nqssybnqssybnqss.png';
+import slider4Before from '@/assets/salt-lily/21be479c-78f9-4710-8412-0dbeee5747a7_1.jpg';
+import slider4After from '@/assets/salt-lily/WhatsApp_Image_2025-10-29_at_19.45.19.jpeg';
 import socialsImg from '@/assets/salt-lily/socials.webp';
 import quintaHeader from '@/assets/quinta-do-pinto-header.jpg';
 import palmeiralHeader from '@/assets/palmeiral-header.avif';
 
 export default function SaltLilyShowcase() {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* 1) HERO — THE BRAND WE BUILT THIS FOR */}
+      {/* 1) HERO */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 max-w-5xl leading-tight">
@@ -40,18 +43,13 @@ export default function SaltLilyShowcase() {
 
         {/* Before/After Slider - full width */}
         <div className="w-full">
-          {/* NOTE: IMG_5326.HEIC is not browser-compatible. Placeholder used for "before". 
-               Replace with a JPG/PNG version when available. */}
           <BeforeAfterSlider
-            beforeImage={femmeProductBefore}
+            beforeImage={goatBefore}
             afterImage={heroAfter}
             beforeLabel="Before"
             afterLabel="After"
             className="w-full max-h-[85vh]"
           />
-          <p className="text-center text-sm text-muted-foreground mt-3 italic">
-            ⚠️ The "Before" image (IMG_5326.HEIC) needs a JPG/PNG version — HEIC is not supported in browsers. Using a placeholder for now.
-          </p>
         </div>
       </section>
 
@@ -105,27 +103,24 @@ export default function SaltLilyShowcase() {
             AI-assisted imagery created specifically for Salt Lily's Instagram grid, matching the look and quality of their existing posts.
           </p>
 
-          {/* Hero image */}
-          <div className="mb-8">
-            <img 
-              src={jewelryProduct} 
-              alt="Salt Lily jewellery product" 
-              className="w-full rounded-lg"
-            />
-          </div>
-
-          {/* Grid */}
+          {/* Two images side by side with subtitles */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <img 
-              src={necklaceAndHoops} 
-              alt="Necklace and hoops lifestyle" 
-              className="w-full rounded-lg"
-            />
-            <img 
-              src={heroAfter} 
-              alt="AI-generated editorial jewellery" 
-              className="w-full rounded-lg object-cover h-full"
-            />
+            <div className="space-y-3">
+              <img 
+                src={necklaceAndHoops} 
+                alt="Basic product photography" 
+                className="w-full rounded-lg"
+              />
+              <p className="text-sm text-muted-foreground text-center italic">Basic product photography</p>
+            </div>
+            <div className="space-y-3">
+              <img 
+                src={heroAfter} 
+                alt="Final social-ready visual" 
+                className="w-full rounded-lg object-cover h-full"
+              />
+              <p className="text-sm text-muted-foreground text-center italic">Final social-ready visual</p>
+            </div>
           </div>
         </div>
       </section>
@@ -174,30 +169,42 @@ export default function SaltLilyShowcase() {
             Lifestyle and close-up images designed for Shopify product and collection pages. These visuals support customer trust, clarity, and conversion.
           </p>
 
-          <div className="space-y-20">
+          <div className="space-y-20 max-w-4xl mx-auto">
             {/* Slider 1 */}
             <BeforeAfterSlider
               beforeImage={femmeProductBefore}
               afterImage={femmeProductAfter}
               beforeLabel="Product Shot"
               afterLabel="Launch-Ready"
-              className="w-full"
+              className="w-full rounded-lg overflow-hidden"
             />
 
-            {/* Slider 2 - placeholder (images not uploaded) */}
-            <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Slider 2 — Awaiting images: 94eb8954… → ChunkyFinal</p>
-            </div>
+            {/* Slider 2 */}
+            <BeforeAfterSlider
+              beforeImage={slider2Before}
+              afterImage={slider2After}
+              beforeLabel="Before"
+              afterLabel="After"
+              className="w-full rounded-lg overflow-hidden"
+            />
 
-            {/* Slider 3 - placeholder (images not uploaded) */}
-            <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Slider 3 — Awaiting images: 5a56838a… → Gemini_nqssyb…</p>
-            </div>
+            {/* Slider 3 */}
+            <BeforeAfterSlider
+              beforeImage={slider3Before}
+              afterImage={slider3After}
+              beforeLabel="Before"
+              afterLabel="After"
+              className="w-full rounded-lg overflow-hidden"
+            />
 
-            {/* Slider 4 - placeholder */}
-            <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Slider 4 — Images coming tomorrow</p>
-            </div>
+            {/* Slider 4 */}
+            <BeforeAfterSlider
+              beforeImage={slider4Before}
+              afterImage={slider4After}
+              beforeLabel="Before"
+              afterLabel="After"
+              className="w-full rounded-lg overflow-hidden"
+            />
           </div>
         </div>
       </section>
@@ -214,7 +221,7 @@ export default function SaltLilyShowcase() {
                 We built a system for Salt Lily that scans their Shopify products and posts daily on Instagram, Facebook and TikTok — and publishes an SEO-optimised blog every day.
               </p>
               <Link 
-                to="/work/o_palmeiral_showcase" 
+                to="/work/O_Palmeiral_showcase" 
                 className="inline-flex items-center gap-2 text-primary font-medium hover:underline text-lg"
               >
                 Want to see what other automations we've built? → O Palmeiral
