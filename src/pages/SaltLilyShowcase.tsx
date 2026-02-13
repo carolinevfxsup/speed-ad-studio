@@ -34,7 +34,7 @@ export default function SaltLilyShowcase() {
     script.src = '//www.instagram.com/embed.js';
     script.async = true;
     document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
+    return () => {document.body.removeChild(script);};
   }, []);
 
   return (
@@ -50,8 +50,8 @@ export default function SaltLilyShowcase() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover opacity-60"
-          />
+            className="w-full h-full object-cover opacity-60" />
+
         </div>
         <div className="container relative z-10 mx-auto px-4 md:px-8 xl:px-[100px] py-20 md:py-32">
           <div className="max-w-4xl">
@@ -68,8 +68,8 @@ export default function SaltLilyShowcase() {
               <Button
                 size="lg"
                 onClick={() => document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' })}
-                className="gap-2 text-lg px-8"
-              >
+                className="gap-2 text-lg px-8">
+
                 View the Work
                 <ArrowRight className="h-5 w-5" />
               </Button>
@@ -77,8 +77,8 @@ export default function SaltLilyShowcase() {
                 size="lg"
                 variant="outline"
                 onClick={() => window.location.href = '/#contact'}
-                className="text-lg px-8 border-white text-white hover:bg-white hover:text-foreground"
-              >
+                className="text-lg px-8 border-white text-white hover:bg-white hover:text-foreground">
+
                 Book a Call
               </Button>
             </div>
@@ -103,10 +103,10 @@ export default function SaltLilyShowcase() {
             </div>
             <div>
               <img
-                src={goatBefore}
+
                 alt="GOAT earring close-up"
-                className="w-full rounded-lg"
-              />
+                className="w-full rounded-lg" src="/lovable-uploads/4ce67d87-2d7b-4bac-9ac6-cf49388b956b.jpg" />
+
             </div>
           </div>
         </div>
@@ -148,20 +148,20 @@ export default function SaltLilyShowcase() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="space-y-3">
               <div className="aspect-square overflow-hidden rounded-lg">
-                <img src={productsMobile} alt="Basic product photography" className="w-full h-full object-cover" />
+                <img alt="Basic product photography" className="w-full h-full object-cover" src="/lovable-uploads/73d4e0cd-f0b4-4e53-9e7a-b9d51bf380b7.jpg" />
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Basic product photography</p>
             </div>
             <div className="space-y-3">
               <div className="aspect-square overflow-hidden rounded-lg">
-                <img src={necklaceAndHoops} alt="Earring product photo" className="w-full h-full object-cover" />
+                <img alt="Earring product photo" className="w-full h-full object-cover" src="/lovable-uploads/49b80539-fe19-479e-9dae-e0eb82e19511.jpg" />
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Earring product photo</p>
             </div>
             {/* Desktop only items */}
             <div className="space-y-3 hidden md:block">
               <div className="aspect-square overflow-hidden rounded-lg">
-                <img src={heroAfter} alt="Finished social-ready AI image" className="w-full h-full object-cover" />
+                <img alt="Finished social-ready AI image" className="w-full h-full object-cover" src="/lovable-uploads/a1e92cc3-97b4-444d-81f5-2e203c63bbf3.png" />
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Finished social-ready AI image</p>
             </div>
@@ -173,8 +173,8 @@ export default function SaltLilyShowcase() {
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover"
-                />
+                  className="w-full h-full object-cover" />
+
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Video content</p>
             </div>
@@ -200,8 +200,8 @@ export default function SaltLilyShowcase() {
               <video
                 src="/videos/Zoom_out_from_202510151723_w51zs.mp4"
                 autoPlay muted loop playsInline
-                className="w-full rounded-lg"
-              />
+                className="w-full rounded-lg" />
+
               <p className="text-sm text-muted-foreground text-center">Resulting short-form video</p>
             </div>
           </div>
@@ -226,8 +226,8 @@ export default function SaltLilyShowcase() {
                 afterImage={femmeProductAfter}
                 beforeLabel="Product Shot"
                 afterLabel="Launch-Ready"
-                className="w-full h-full [&_img]:object-cover"
-              />
+                className="w-full h-full [&_img]:object-cover" />
+
             </div>
 
             {/* Slider 2 */}
@@ -237,8 +237,8 @@ export default function SaltLilyShowcase() {
                 afterImage={slider2After}
                 beforeLabel="Before"
                 afterLabel="After"
-                className="w-full h-full [&_img]:object-cover"
-              />
+                className="w-full h-full [&_img]:object-cover" />
+
             </div>
 
             {/* Slider 3 — replaced image */}
@@ -248,8 +248,8 @@ export default function SaltLilyShowcase() {
                 afterImage={heartNW}
                 beforeLabel="Before"
                 afterLabel="After"
-                className="w-full h-full [&_img]:object-cover"
-              />
+                className="w-full h-full [&_img]:object-cover" />
+
             </div>
 
             {/* Slider 4 — replaced image */}
@@ -259,8 +259,8 @@ export default function SaltLilyShowcase() {
                 afterImage={smilingNoWatermark}
                 beforeLabel="Before"
                 afterLabel="After"
-                className="w-full h-full [&_img]:object-cover"
-              />
+                className="w-full h-full [&_img]:object-cover" />
+
             </div>
           </div>
         </div>
@@ -299,21 +299,21 @@ export default function SaltLilyShowcase() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <Upload className="h-6 w-6" />, step: '01', text: 'Generate creatives from brief + brand identity' },
-              { icon: <FolderOpen className="h-6 w-6" />, step: '02', text: 'Upload to project drive, categorised' },
-              { icon: <Hash className="h-6 w-6" />, step: '03', text: 'AI assigns description, hashtags, alt-text, location' },
-              { icon: <UserCheck className="h-6 w-6" />, step: '04', text: 'User approves posts' },
-              { icon: <Send className="h-6 w-6" />, step: '05', text: 'AI posts daily across channels' },
-              { icon: <Mail className="h-6 w-6" />, step: '06', text: 'Email sent after successful post with link' },
-            ].map((item) => (
-              <div key={item.step} className="p-6 border border-border rounded-lg bg-card">
+            { icon: <Upload className="h-6 w-6" />, step: '01', text: 'Generate creatives from brief + brand identity' },
+            { icon: <FolderOpen className="h-6 w-6" />, step: '02', text: 'Upload to project drive, categorised' },
+            { icon: <Hash className="h-6 w-6" />, step: '03', text: 'AI assigns description, hashtags, alt-text, location' },
+            { icon: <UserCheck className="h-6 w-6" />, step: '04', text: 'User approves posts' },
+            { icon: <Send className="h-6 w-6" />, step: '05', text: 'AI posts daily across channels' },
+            { icon: <Mail className="h-6 w-6" />, step: '06', text: 'Email sent after successful post with link' }].
+            map((item) =>
+            <div key={item.step} className="p-6 border border-border rounded-lg bg-card">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg">{item.icon}</div>
                   <span className="text-2xl font-display font-bold text-muted-foreground/40">{item.step}</span>
                 </div>
                 <p className="text-foreground font-medium">{item.text}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -327,20 +327,20 @@ export default function SaltLilyShowcase() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-4">
               {[
-                'AI selects a product from the Shopify catalogue',
-                'Generates an SEO-optimised blog post with images',
-                'Adds internal links, meta tags, and structured data',
-                'Publishes to the blog automatically',
-                'Blog post links back to the product page',
-                'Daily cadence — no manual input required',
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
+              'AI selects a product from the Shopify catalogue',
+              'Generates an SEO-optimised blog post with images',
+              'Adds internal links, meta tags, and structured data',
+              'Publishes to the blog automatically',
+              'Blog post links back to the product page',
+              'Daily cadence — no manual input required'].
+              map((item, i) =>
+              <div key={i} className="flex items-start gap-3">
                   <div className="h-7 w-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="h-4 w-4 text-foreground" />
                   </div>
                   <span className="text-lg">{item}</span>
                 </div>
-              ))}
+              )}
             </div>
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -377,15 +377,15 @@ export default function SaltLilyShowcase() {
                 className="instagram-media"
                 data-instgrm-permalink="https://www.instagram.com/reel/DJrXpIjIKkK/?utm_source=ig_embed&amp;utm_campaign=loading"
                 data-instgrm-version="14"
-                style={{ background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '540px', minWidth: '326px', padding: 0, width: '99.375%' }}
-              >
+                style={{ background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '540px', minWidth: '326px', padding: 0, width: '99.375%' }}>
+
                 <div style={{ padding: '16px' }}>
                   <a
                     href="https://www.instagram.com/reel/DJrXpIjIKkK/?utm_source=ig_embed&amp;utm_campaign=loading"
                     style={{ background: '#FFFFFF', lineHeight: 0, padding: '0 0', textAlign: 'center', textDecoration: 'none', width: '100%' }}
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer">
+
                     View this post on Instagram
                   </a>
                 </div>
@@ -403,19 +403,19 @@ export default function SaltLilyShowcase() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
             {[
-              'Consistent premium visuals',
-              'Faster campaign cycles',
-              'Fewer photoshoots',
-              'Scalable content output',
-              'Reduced creative bottlenecks',
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3">
+            'Consistent premium visuals',
+            'Faster campaign cycles',
+            'Fewer photoshoots',
+            'Scalable content output',
+            'Reduced creative bottlenecks'].
+            map((item) =>
+            <div key={item} className="flex items-center gap-3">
                 <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Check className="h-4 w-4 text-foreground" />
                 </div>
                 <span className="text-lg">{item}</span>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -432,8 +432,8 @@ export default function SaltLilyShowcase() {
           <Button
             size="lg"
             onClick={() => window.location.href = '/#contact'}
-            className="text-lg px-10 bg-primary text-primary-foreground hover:bg-primary/90"
-          >
+            className="text-lg px-10 bg-primary text-primary-foreground hover:bg-primary/90">
+
             Book a Call
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -445,16 +445,16 @@ export default function SaltLilyShowcase() {
         prevProject={{
           title: 'Quinta do Pinto',
           slug: '/work/quinta-do-pinto',
-          thumbnail: quintaHeader,
+          thumbnail: quintaHeader
         }}
         nextProject={{
           title: 'O Palmeiral',
           slug: '/work/O_Palmeiral_showcase',
-          thumbnail: palmeiralHeader,
-        }}
-      />
+          thumbnail: palmeiralHeader
+        }} />
+
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
