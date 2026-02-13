@@ -23,6 +23,7 @@ import slider3After from '@/assets/salt-lily/Gemini_Generated_Image_nqssybnqssyb
 import heartNW from '@/assets/salt-lily/heart_NW.jpeg';
 import smilingNoWatermark from '@/assets/salt-lily/smiling_no_watermark.jpeg';
 import productsMobile from '@/assets/salt-lily/products_mobile.jpg';
+import slider4Before from '@/assets/salt-lily/21be479c-78f9-4710-8412-0dbeee5747a7_1.jpg';
 import socialsImg from '@/assets/salt-lily/socials.webp';
 import quintaHeader from '@/assets/quinta-do-pinto-header.jpg';
 import palmeiralHeader from '@/assets/palmeiral-header.avif';
@@ -146,25 +147,29 @@ export default function SaltLilyShowcase() {
 
           {/* Desktop/iPad: 4 columns — Mobile: 2 columns */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* Col 1: Basic product photography — desktop shows lovable-upload, mobile/tablet shows products_mobile */}
             <div className="space-y-3">
               <div className="aspect-square overflow-hidden rounded-lg">
-                <img alt="Basic product photography" className="w-full h-full object-cover" src="/lovable-uploads/73d4e0cd-f0b4-4e53-9e7a-b9d51bf380b7.jpg" />
+                <img alt="Basic product photography" className="w-full h-full object-cover hidden md:block" src="/lovable-uploads/73d4e0cd-f0b4-4e53-9e7a-b9d51bf380b7.jpg" />
+                <img alt="Basic product photography" className="w-full h-full object-cover md:hidden" src={productsMobile} />
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Basic product photography</p>
             </div>
-            <div className="space-y-3">
+            {/* Col 2: Earring — desktop only */}
+            <div className="space-y-3 hidden md:block">
               <div className="aspect-square overflow-hidden rounded-lg">
                 <img alt="Earring product photo" className="w-full h-full object-cover" src="/lovable-uploads/49b80539-fe19-479e-9dae-e0eb82e19511.jpg" />
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Earring product photo</p>
             </div>
-            {/* Desktop only items */}
-            <div className="space-y-3 hidden md:block">
+            {/* Col 3: Finished social-ready AI image — always visible */}
+            <div className="space-y-3">
               <div className="aspect-square overflow-hidden rounded-lg">
                 <img alt="Finished social-ready AI image" className="w-full h-full object-cover" src="/lovable-uploads/a1e92cc3-97b4-444d-81f5-2e203c63bbf3.png" />
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Finished social-ready AI image</p>
             </div>
+            {/* Col 4: Video — desktop only */}
             <div className="space-y-3 hidden md:block">
               <div className="aspect-square overflow-hidden rounded-lg">
                 <video
@@ -174,7 +179,6 @@ export default function SaltLilyShowcase() {
                   loop
                   playsInline
                   className="w-full h-full object-cover" />
-
               </div>
               <p className="text-sm text-muted-foreground text-center italic">Video content</p>
             </div>
@@ -252,15 +256,14 @@ export default function SaltLilyShowcase() {
 
             </div>
 
-            {/* Slider 4 — replaced image */}
+            {/* Slider 4 */}
             <div className="aspect-square overflow-hidden rounded-lg">
               <BeforeAfterSlider
-                beforeImage={slider3After}
+                beforeImage={slider4Before}
                 afterImage={smilingNoWatermark}
                 beforeLabel="Before"
                 afterLabel="After"
                 className="w-full h-full [&_img]:object-cover" />
-
             </div>
           </div>
         </div>
