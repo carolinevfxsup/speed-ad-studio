@@ -81,8 +81,8 @@ export default function SaltLilyShowcase() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => window.location.href = '/#contact'}
-                className="text-lg px-8 border-white text-white hover:bg-white hover:text-foreground">
+                onClick={() => window.location.href = 'https://www.nustudios.co.uk/#contact'}
+                className="text-lg px-8 bg-white/10 border-white/30 text-white hover:bg-white/20">
 
                 Book a Call
               </Button>
@@ -206,7 +206,7 @@ export default function SaltLilyShowcase() {
             </div>
             <div className="space-y-4">
               <video
-                src="/videos/Zoom_out_from_202510151723_w51zs.mp4"
+                src="/videos/salt-lily-zoom.mp4"
                 autoPlay muted loop playsInline
                 className="w-full rounded-lg" />
 
