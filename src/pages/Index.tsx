@@ -20,9 +20,9 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <Offer />
         <SocialProof />
         <ValueProps />
-        <Offer />
         <Pricing />
         <HowItWorks />
         {/* Hide ICP on desktop, show on mobile/tablet with updated icon styles */}
