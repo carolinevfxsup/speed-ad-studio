@@ -204,6 +204,23 @@ export const translations = {
       success: 'Thanks! We\'ll be in touch soon.',
       selectPackage: 'Select a package',
     },
+    services: {
+      aiContent: {
+        title: 'Content Creation',
+        description: 'As an AI-first studio, we use cutting-edge tools to generate or enhance creative, but we also work with real footage and product photography when a hybrid approach delivers more impact. Whether fully AI-generated, human-shot, or a blend of both, we design, direct, and deliver scroll-stopping content that feels authentic, premium, and built for scale.',
+      },
+      aiAutomation: {
+        title: 'Automations',
+        description: 'Transform how you operate. Our AI automation solutions free up valuable time and resources, eliminating tedious tasks and empowering your team to achieve more with less effort.',
+        bullets: ['Content Repurposing', 'Content distribution and scheduling', 'AI blogging and SEO automations'],
+        cta: 'View Full List',
+      },
+      vfx: {
+        title: 'Solutions',
+        description: 'Selected VFX work delivered by NU Studios Ltd. partnerships.',
+        bullets: ['VFX consulting & supervision (on set & off)', 'Script breakdowns & budgeting', 'Compositing & shot production', 'Delivering full VFX shots/projects/productions either directly or through industry'],
+      },
+    },
     // Showcase page translations
     quinta: {
       heroTitle: 'Quinta do Pinto',
@@ -628,6 +645,23 @@ export const translations = {
       submit: 'Enviar Mensagem',
       success: 'Obrigado! Entraremos em contacto em breve.',
       selectPackage: 'Selecione um pacote',
+    },
+    services: {
+      aiContent: {
+        title: 'Criação de Conteúdo',
+        description: 'Como estúdio AI-first, utilizamos ferramentas de ponta para gerar ou melhorar criativos, mas também trabalhamos com filmagens reais e fotografia de produto quando uma abordagem híbrida gera mais impacto. Seja totalmente gerado por IA, filmado por humanos, ou uma mistura de ambos, desenhamos, dirigimos e entregamos conteúdo impactante que transmite autenticidade, qualidade premium e está preparado para escalar.',
+      },
+      aiAutomation: {
+        title: 'Automações',
+        description: 'Transforme a forma como opera. As nossas soluções de automação com IA libertam tempo e recursos valiosos, eliminando tarefas repetitivas e capacitando a sua equipa para alcançar mais com menos esforço.',
+        bullets: ['Reaproveitamento de Conteúdo', 'Distribuição e agendamento de conteúdo', 'Automações de blog e SEO com IA'],
+        cta: 'Ver Lista Completa',
+      },
+      vfx: {
+        title: 'Soluções',
+        description: 'Trabalhos VFX selecionados realizados através de parcerias da NU Studios Ltd.',
+        bullets: ['Consultoria e supervisão VFX (no set e fora)', 'Análise de roteiro e orçamentação', 'Compositing e produção de shots', 'Entrega de shots/projetos/produções VFX completas diretamente ou através da indústria'],
+      },
     },
     // Showcase page translations - Portuguese
     quinta: {

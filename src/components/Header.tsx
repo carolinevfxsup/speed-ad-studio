@@ -88,7 +88,7 @@ export function Header() {
                       }} 
                       className="w-full text-left cursor-pointer"
                     >
-                      All Work
+                      {t.nav.allWork}
                     </button>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -104,6 +104,11 @@ export function Header() {
                   <DropdownMenuItem asChild>
                     <a href="/work/O_Palmeiral_showcase" className="cursor-pointer">
                       O Palmeiral Restaurant
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="/work/franks-australia" className="cursor-pointer">
+                      Franks Australia
                     </a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -129,7 +134,7 @@ export function Header() {
                 {t.nav.howItWorks}
               </button>
               <a href="/automations" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                Automations
+                {t.nav.automations}
               </a>
             </nav>
 
@@ -140,7 +145,7 @@ export function Header() {
               </Button>
               
               {/* Desktop Book Call Button */}
-              <Button onClick={() => scrollToSection('contact')} className="hidden xl:flex">
+              <Button onClick={() => window.location.href = 'https://www.nustudios.co.uk/#contact'} className="hidden xl:flex">
                 {t.nav.bookCall}
               </Button>
 
@@ -167,26 +172,17 @@ export function Header() {
                       <button onClick={() => handleMobileNavClick('work')} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md w-full">
                         {t.nav.work}
                       </button>
-                      <a 
-                        href="/work/quinta-do-pinto" 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block"
-                      >
+                      <a href="/work/quinta-do-pinto" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block">
                         Quinta Do Pinto
                       </a>
-                      <a 
-                        href="/work/salt_lily_showcase" 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block"
-                      >
+                      <a href="/work/salt_lily_showcase" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block">
                         Salt Lily Jewellery
                       </a>
-                      <a 
-                        href="/work/O_Palmeiral_showcase" 
-                        onClick={() => setMobileMenuOpen(false)} 
-                        className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block"
-                      >
+                      <a href="/work/O_Palmeiral_showcase" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block">
                         O Palmeiral Restaurant
+                      </a>
+                      <a href="/work/franks-australia" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block">
+                        Franks Australia
                       </a>
                     </div>
                     <button onClick={() => handleMobileNavClick('pricing')} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md">
@@ -203,7 +199,7 @@ export function Header() {
                       {t.nav.howItWorks}
                     </button>
                     <a href="/automations" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md block">
-                      Automations
+                      {t.nav.automations}
                     </a>
                     <div className="pt-6 border-t border-border">
                       <div className="flex gap-2">
@@ -229,14 +225,10 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile/Tablet CTA Banner - positioned above header */}
+      {/* Mobile/Tablet CTA Banner */}
       <div className="xl:hidden fixed top-0 left-0 right-0 z-50 bg-primary border-b-2 border-black">
         <button onClick={() => {
-        if (window.location.pathname !== '/') {
-          window.location.href = '/#contact';
-        } else {
-          scrollToSection('contact');
-        }
+        window.location.href = 'https://www.nustudios.co.uk/#contact';
       }} className="w-full py-2 px-4 text-center">
           <p className="text-xs font-bold text-black">BOOK YOUR DISCOVERY CALL</p>
           <p className="text-[10px] text-black/70">30 minutes</p>

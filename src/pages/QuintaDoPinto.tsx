@@ -20,12 +20,7 @@ const QuintaDoPinto = () => {
   const t = useTranslation(language);
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/#contact';
-    }
+    window.location.href = 'https://www.nustudios.co.uk/#contact';
   };
 
   return (
@@ -275,7 +270,7 @@ const QuintaDoPinto = () => {
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px]">
-              <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
                     {t.quinta.whyWineTitle.split(' ').slice(0, 2).join(' ')} <span className="italic">{t.quinta.whyWineTitle.split(' ').slice(2).join(' ')}</span>
@@ -311,14 +306,14 @@ const QuintaDoPinto = () => {
         </section>
 
         {/* Want to Automate Your Socials? - NEW SECTION */}
-        <section className="py-20 md:py-32 bg-muted/20">
+        <section className="py-20 md:py-32 bg-foreground">
           <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
             <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px]">
               <div className="max-w-3xl">
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-background">
                   {t.quinta.automateTitle}
                 </h2>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+                <p className="text-lg md:text-xl text-background/80 leading-relaxed mb-8">
                   {t.quinta.automateText}{' '}
                   <a href="/work/O_Palmeiral_showcase" className="text-primary underline hover:text-primary/80 font-medium">O Palmeiral</a>
                   {' '}{t.quinta.automateAnd}{' '}
