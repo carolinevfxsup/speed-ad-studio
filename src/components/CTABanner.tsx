@@ -7,10 +7,7 @@ export function CTABanner() {
   const t = useTranslation(language);
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = 'https://www.nustudios.co.uk/#contact';
   };
 
   return (

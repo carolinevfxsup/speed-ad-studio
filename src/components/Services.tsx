@@ -2,12 +2,16 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/lib/i18n';
 import aiContentFrame from '@/assets/ai-content-frame.png';
 import automationImage from '@/assets/automation-03.png';
 import vfxFrame from '@/assets/vfx-frame-01.png';
 
 export function Services() {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
+  const { language } = useLanguage();
+  const t = useTranslation(language);
 
   const openVideo = (url: string) => {
     setVideoUrl(url);
@@ -25,10 +29,10 @@ export function Services() {
           <div className="order-2 md:order-1">
             <h2 className="text-4xl font-display mb-6">
               <span className="font-bold">AI</span>{' '}
-              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Content Creation</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{t.services.aiContent.title}</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              As an AI-first studio, we use cutting-edge tools to generate or enhance creative, but we also work with real footage and product photography when a hybrid approach delivers more impact. Whether fully AI-generated, human-shot, or a blend of both, we design, direct, and deliver scroll-stopping content that feels authentic, premium, and built for scale.
+              {t.services.aiContent.description}
             </p>
             <Button 
               onClick={() => openVideo('https://player.vimeo.com/video/1140751488')}
@@ -42,11 +46,7 @@ export function Services() {
               className="aspect-video bg-muted rounded-lg overflow-hidden cursor-pointer group relative"
               onClick={() => openVideo('https://player.vimeo.com/video/1140751488')}
             >
-              <img 
-                src={aiContentFrame} 
-                alt="AI Content Creation" 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
+              <img src={aiContentFrame} alt="AI Content Creation" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-16 h-16 rounded-full bg-primary border-2 border-black flex items-center justify-center">
                   <Play className="h-8 w-8 text-black ml-1" fill="#e1f89d" />
@@ -60,31 +60,27 @@ export function Services() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-1">
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              <img 
-                src={automationImage} 
-                alt="AI Automations" 
-                className="w-full h-full object-cover"
-              />
+              <img src={automationImage} alt="AI Automations" className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="order-2">
             <h2 className="text-4xl font-display mb-6">
               <span className="font-bold">AI</span>{' '}
-              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Automations</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{t.services.aiAutomation.title}</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Transform how you operate. Our AI automation solutions free up valuable time and resources, eliminating tedious tasks and empowering your team to achieve more with less effort.
+              {t.services.aiAutomation.description}
             </p>
             <ul className="text-lg text-muted-foreground space-y-3 mb-6">
-              <li>• Content Repurposing</li>
-              <li>• Content distribution and scheduling</li>
-              <li>• AI blogging and SEO automations</li>
+              {t.services.aiAutomation.bullets.map((b, i) => (
+                <li key={i}>• {b}</li>
+              ))}
             </ul>
             <Button 
               onClick={() => window.location.href = '/automations'}
               className="bg-primary text-black border-2 border-black hover:bg-white hover:text-black gap-2"
             >
-              View Full List <ArrowRight className="h-4 w-4" />
+              {t.services.aiAutomation.cta} <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -94,16 +90,15 @@ export function Services() {
           <div className="order-2 md:order-1">
             <h2 className="text-4xl font-display mb-6">
               <span className="font-bold">VFX</span>{' '}
-              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">Solutions</span>
+              <span className="italic bg-gradient-to-r from-[#ff9a56] via-[#ff6b9d] to-[#c96dd8] bg-clip-text text-transparent">{t.services.vfx.title}</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Selected VFX work delivered by NU Studios Ltd. partnerships.
+              {t.services.vfx.description}
             </p>
             <ul className="text-lg text-muted-foreground space-y-3 mb-6">
-              <li>• VFX consulting & supervision (on set & off)</li>
-              <li>• Script breakdowns & budgeting</li>
-              <li>• Compositing & shot production</li>
-              <li>• Delivering full VFX shots/projects/productions either directly or through industry</li>
+              {t.services.vfx.bullets.map((b, i) => (
+                <li key={i}>• {b}</li>
+              ))}
             </ul>
             <Button 
               onClick={() => openVideo('https://player.vimeo.com/video/1139981506')}
@@ -117,11 +112,7 @@ export function Services() {
               className="aspect-video bg-muted rounded-lg overflow-hidden cursor-pointer group relative"
               onClick={() => openVideo('https://player.vimeo.com/video/1139981506')}
             >
-              <img 
-                src={vfxFrame} 
-                alt="VFX Solutions" 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
+              <img src={vfxFrame} alt="VFX Solutions" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-16 h-16 rounded-full bg-primary border-2 border-black flex items-center justify-center">
                   <Play className="h-8 w-8 text-black ml-1" fill="#e1f89d" />

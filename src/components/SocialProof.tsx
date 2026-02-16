@@ -3,7 +3,7 @@ import { useTranslation } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import theIdeaGif from '@/assets/quinta-the-idea.gif';
-import palmeiralPost from '@/assets/palmeiral-social-post.jpeg';
+import palmeiralMain from '@/assets/palmeiral-main.png';
 
 export function SocialProof() {
   const { language } = useLanguage();
@@ -18,7 +18,7 @@ export function SocialProof() {
     {
       title: 'O Palmeiral',
       href: '/work/O_Palmeiral_showcase',
-      media: { type: 'image' as const, src: palmeiralPost },
+      media: { type: 'image' as const, src: palmeiralMain },
     },
     {
       title: 'Salt Lily Jewellery',
