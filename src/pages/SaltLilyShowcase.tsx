@@ -220,10 +220,10 @@ export default function SaltLilyShowcase() {
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 {t.saltLily.aiBrainText}
               </p>
-              <Button asChild size="lg" className="gap-2">
-                <Link to="/work/O_Palmeiral_showcase">
+              <Button asChild size="lg" className="gap-2 max-w-full whitespace-normal text-left h-auto py-3 px-4 min-w-0">
+                <Link to="/work/O_Palmeiral_showcase" className="flex items-center gap-2 flex-wrap">
                   {t.saltLily.aiBrainLink}
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5 flex-shrink-0" />
                 </Link>
               </Button>
             </div>
@@ -308,11 +308,11 @@ export default function SaltLilyShowcase() {
                 {t.saltLily.systemText2}
               </p>
             </div>
-            <div className="flex justify-center">
+            <div className="w-full min-w-0 overflow-hidden">
               <img
                 src={saltLilyLast}
                 alt="Salt Lily jewellery on model"
-                className="w-full max-w-[540px] rounded-lg shadow-xl"
+                className="w-full h-full object-cover rounded-lg shadow-xl"
               />
             </div>
           </div>

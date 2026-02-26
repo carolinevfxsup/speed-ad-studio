@@ -106,11 +106,13 @@ export function Header() {
                       O Palmeiral Restaurant
                     </a>
                   </DropdownMenuItem>
+                  {/* Hidden until Franks Australia page is ready — unhide when finished
                   <DropdownMenuItem asChild>
                     <a href="/work/franks-australia" className="cursor-pointer">
                       Franks Australia
                     </a>
                   </DropdownMenuItem>
+                  */}
                 </DropdownMenuContent>
               </DropdownMenu>
               <button onClick={() => {
@@ -181,9 +183,11 @@ export function Header() {
                       <a href="/work/O_Palmeiral_showcase" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block">
                         O Palmeiral Restaurant
                       </a>
+                      {/* Hidden until Franks Australia page is ready — unhide when finished
                       <a href="/work/franks-australia" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-muted-foreground hover:bg-muted/50 transition-colors text-left py-2 px-8 rounded-md block">
                         Franks Australia
                       </a>
+                      */}
                     </div>
                     <button onClick={() => handleMobileNavClick('pricing')} className="text-lg font-medium text-foreground hover:bg-muted/50 transition-colors text-left py-3 px-4 rounded-md">
                       {t.nav.pricing}
